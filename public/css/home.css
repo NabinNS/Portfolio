@@ -3,142 +3,134 @@
     margin: 0;
     padding: 0;
     font-family: "Poppins", sans-serif;
-  }
-  body {
-    background-color: #24252a;
+}
+body {
+    background-color: #4169e1;
     color: #edf0f1;
     line-height: 1.5;
-  }
-  
-  li,
-  a {
+}
+p {
+    text-align: justify;
+}
+li,
+a {
     font-weight: 500;
     font-size: 1rem;
     color: #edf0f1;
     text-decoration: none;
-  }
-  nav {
+}
+nav {
     text-align: center;
-  }
-  
-  .div-center {
+}
+
+.div-center {
     display: grid;
     place-items: center;
     margin: auto;
-  }
-  /* --------------HEADER STYLINGS-------------- */
-  
-  .background-img {
-    background-image: url("./images/background.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-  }
-  .logo {
-    font-size: 4rem;
+}
+/* --------------HEADER STYLINGS-------------- */
+
+.logo {
+    font-size: 2rem;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 5px;
     cursor: pointer;
-  }
-  .social-container {
+}
+.nav-container {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
-    padding: 20px 0px;
-    margin-left: auto;
-  }
-  .social-links,
-  .nav-links {
+    margin: auto;
+}
+
+.social-links,
+.nav-links {
     display: flex; /* Add this to make sure the links are in a row */
     list-style: none; /* Remove default list styles */
     margin: 0; /* Remove default margin */
     padding: 0; /* Remove default padding */
-  }
-  .social-links li,
-  .nav-links li {
+}
+.social-links li,
+.nav-links li {
     display: inline-block;
     margin: 0 10px;
-  }
-  .social-links li a,
-  .nav-links li a,
-  .logo {
+}
+.social-links li a,
+.nav-links li a,
+.logo {
     transition: all 0.3s ease-in 0s;
-  }
-  
-  .social-links li a:hover,
-  .nav-links li a:hover,
-  .logo:hover {
-    color: #0088a9;
-  }
-  .nav-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  /* -------------------------------------------- */
-  
-  /* --------------BODY STYLINGS-------------- */
-  /* CSS for paragraphs layout */
-  .paragraphs {
-      display: flex; /* Use flexbox for layout */
-      justify-content: space-between; /* Space items evenly */
-  }
-  
-  /* Adjust spacing and width of paragraphs */
-  .paragraphs p {
-      flex: 1; /* Make each paragraph take equal width */
-      margin-right: 10px; /* Add some spacing between paragraphs (optional) */
-  }
-  
-  /* -------------------------------------------- */
-  
-  /* --------------IMAGE GALLERY STYLINGS-------------- */
-  .img-container {
+}
+
+.social-links li a:hover,
+.nav-links li a:hover,
+.logo:hover {
+    color: #24252a;
+}
+/*-------------------------------------------- */
+
+/* --------------BODY STYLINGS-------------- */
+
+.content {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space items evenly */
+}
+.content article {
+    flex: 1; /* Make each paragraph take equal width */
+    margin-right: 10px; /* Add some spacing between paragraphs (optional) */
+}
+.home-image {
+    height: 50vh;
+    width: 30vw;
+    margin: 2rem;
+}
+/* -------------------------------------------- */
+
+/* --------------IMAGE GALLERY STYLINGS-------------- */
+.img-container {
     background-color: #edf0f1;
     padding: 3rem 0;
-  }
-  .heading {
+}
+.heading {
     text-align: center;
     color: #24252a;
     width: 100%;
-  }
-  
-  .heading-underline {
-    background: #0088a9;
+}
+
+.heading-underline {
+    background: #4169e1;
     width: 10rem;
     height: 0.25rem;
     margin: 0 auto;
     margin-top: 1rem;
-  }
-  
-  .gallery {
+}
+
+.gallery {
     display: flex;
     flex-wrap: wrap;
     /* Compensate for excess margin on outer gallery flex items */
     margin: -1rem -1rem;
-  }
-  
-  .gallery-item {
+}
+
+.gallery-item {
     /* Minimum width of 24rem and grow to fit available space */
     flex: 1 0 24rem;
     /* Margin value should be half of grid-gap value as margins on flex items don't collapse */
     margin: 1rem;
     box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
     overflow: hidden;
-  }
-  
-  .gallery-image {
+}
+
+.gallery-image {
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 400ms ease-out;
-  }
-  
-  .gallery-image:hover {
+}
+
+.gallery-image:hover {
     transform: scale(1.15);
-  }
-  
-  /* -------------------------------------------- */
-  
+}
+
+/* -------------------------------------------- */
