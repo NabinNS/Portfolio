@@ -15,4 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('/', [NavigationController::class, 'home'] )->name('home');
+Route::get('/', [NavigationController::class, 'homepage'] )->name('home');
+Route::get('/bio', [NavigationController::class, 'biopage'] )->name('bio');
+Route::get('/contact', [NavigationController::class, 'contactpage'] )->name('contact');
+Route::get('/about', [NavigationController::class, 'aboutpage'] )->name('about');
