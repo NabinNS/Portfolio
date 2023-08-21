@@ -7,7 +7,8 @@ use Illuminate\Http\Request;
 
 class NavigationController extends Controller
 {
-    public function home(){
+    public function homepage(){
         return view('frontend.home');
     }
+ 
 }

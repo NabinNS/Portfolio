@@ -5,132 +5,43 @@
     font-family: "Poppins", sans-serif;
 }
 body {
-    background-color: #4169e1;
-    color: #edf0f1;
+    background-color: #eff4fd;
     line-height: 1.5;
+    height: 100vh;
 }
-p {
-    text-align: justify;
+.detel{
+    margin-left: 8%;
+    margin-top: 15%;
 }
-li,
-a {
-    font-weight: 500;
-    font-size: 1rem;
-    color: #edf0f1;
-    text-decoration: none;
+.detel h1{
+    font-size: 50px;
+    font-weight: 700;
+    color: #212121;
+    margin-bottom: 20px;
 }
-nav {
-    text-align: center;
+span{
+    color: orange;
 }
-
-.div-center {
-    display: grid;
-    place-items: center;
-    margin: auto;
+.detel p {
+    color: #555;
+    line-height: 22px;
 }
-/* --------------HEADER STYLINGS-------------- */
-
-.logo {
-    font-size: 2rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    cursor: pointer;
+.images{
+    width: 45%;
+    height: 80%;
+    position: absolute;
+    bottom: 0;
+    right: 100px;
 }
-.nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: auto;
-}
-
-.social-links,
-.nav-links {
-    display: flex; /* Add this to make sure the links are in a row */
-    list-style: none; /* Remove default list styles */
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
-}
-.social-links li,
-.nav-links li {
-    display: inline-block;
-    margin: 0 10px;
-}
-.social-links li a,
-.nav-links li a,
-.logo {
-    transition: all 0.3s ease-in 0s;
-}
-
-.social-links li a:hover,
-.nav-links li a:hover,
-.logo:hover {
-    color: #24252a;
-}
-/*-------------------------------------------- */
-
-/* --------------BODY STYLINGS-------------- */
-
-.content {
-    display: flex; /* Use flexbox for layout */
-    justify-content: space-between; /* Space items evenly */
-}
-.content article {
-    flex: 1; /* Make each paragraph take equal width */
-    margin-right: 10px; /* Add some spacing between paragraphs (optional) */
-}
-.home-image {
-    height: 50vh;
-    width: 30vw;
-    margin: 2rem;
-}
-/* -------------------------------------------- */
-
-/* --------------IMAGE GALLERY STYLINGS-------------- */
-.img-container {
-    background-color: #edf0f1;
-    padding: 3rem 0;
-}
-.heading {
-    text-align: center;
-    color: #24252a;
-    width: 100%;
-}
-
-.heading-underline {
-    background: #4169e1;
-    width: 10rem;
-    height: 0.25rem;
-    margin: 0 auto;
-    margin-top: 1rem;
-}
-
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    /* Compensate for excess margin on outer gallery flex items */
-    margin: -1rem -1rem;
-}
-
-.gallery-item {
-    /* Minimum width of 24rem and grow to fit available space */
-    flex: 1 0 24rem;
-    /* Margin value should be half of grid-gap value as margins on flex items don't collapse */
-    margin: 1rem;
-    box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
-    overflow: hidden;
-}
-
-.gallery-image {
-    display: block;
-    width: 100%;
+.images img{
     height: 100%;
-    object-fit: cover;
-    transition: transform 400ms ease-out;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%);
+    transition: bottom 1s, left 1s;
+} 
+.home-bio{
+    line-height: 2;
 }
 
-.gallery-image:hover {
-    transform: scale(1.15);
-}
-
-/* -------------------------------------------- */
