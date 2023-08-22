@@ -9,6 +9,7 @@ body {
     line-height: 1.5;
 
 }
+/* -------------Home Page------------------------- */
 .first-container{
     height: 93vh;
     width: 80vw;
@@ -21,13 +22,13 @@ body {
     justify-content: center;
     flex-direction: column;
 }
-.detel h1{
+.detel h1 {
     font-size: 50px;
     font-weight: 700;
     color: #212121;
     margin-bottom: 20px;
 }
-span{
+span {
     color: orange;
 }
 .detel p {
@@ -192,3 +193,171 @@ span{
 .social-media a.social-link:hover {
     color: white;
 }
+/* -------------End of Home Page------------------------- */
+
+/* --------------------------- Contact Page---------------------------------- */
+.contact {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contact-container {
+    max-width: 1050px;
+    width: 100%;
+    background: #ffffff;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+    margin: 0 2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+.contact-container .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 25px 20px;
+}
+.content .image-box {
+    max-width: 55%;
+}
+.content .image-box img {
+    max-width: 100%;
+}
+.content .title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: orange;
+}
+.content form {
+    width: 40%;
+    margin-right: 30px;
+}
+.content .input-box {
+    height: 50px;
+    width: 100%;
+    margin: 16px 0;
+    position: relative;
+}
+.content .input-box input {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    outline: none;
+    background: #eff4fd;
+    border: 2px solid transparent;
+    padding-left: 1.2rem;
+    font-size: 1rem;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+}
+.content .input-box input:focus,
+.content .input-box input:valid {
+    background-color: #ffffff;
+    border-color: orange;
+}
+.content .input-box label {
+    position: absolute;
+    top: 50%;
+    left: 1.2rem;
+    pointer-events: none;
+    font-size: 1rem;
+    transition: all 0.3s ease-in-out;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+
+.content .input-box input:focus ~ label,
+.content .input-box input:valid ~ label {
+    top: 0;
+    left: 1rem;
+    color: orange;
+    background-color: #ffffff;
+}
+.content .message-box {
+    min-height: 100px;
+    position: relative;
+}
+.content .message-box textarea {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    resize: none;
+    outline: none;
+    padding-top: 1rem;
+    padding-left: 1.2rem;
+    border: 2px solid transparent;
+    background: #eff4fd;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+}
+
+.content .message-box textarea:focus {
+    border-color: orange;
+    background-color: #ffffff;
+}
+.content .message-box label {
+    position: absolute;
+    top: 9px;
+    pointer-events: none;
+    left: 1.1rem;
+    font-size: 1rem;
+    transition: all 0.3s ease-in-out;
+}
+.content .message-box textarea:focus ~ label {
+    left: 12px;
+    top: -10px;
+    color: orange;
+    background: #ffffff;
+}
+.content .input-box input[type="submit"] {
+    color: #ffffff;
+    background: orange;
+    cursor: pointer;
+    padding-left: 0;
+    letter-spacing: 1;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+.content .input-box input[type="submit"]:hover {
+    background-color: #ffbf00;
+}
+@media (max-width: 1000px) {
+    .content .image-box {
+        max-width: 70%;
+    }
+    .content {
+        padding: 10px 0;
+    }
+}
+@media (max-width: 900px) {
+    .content .image-box {
+        display: none;
+    }
+    .content form {
+        width: 100%;
+        margin-right: 30px;
+    }
+}
+/* -------------------------------------------------------------------------- */
