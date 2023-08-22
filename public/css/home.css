@@ -5,13 +5,22 @@
     font-family: "Poppins", sans-serif;
 }
 body {
-    background-color: #eff4fd;
+    background-color: #eef4ed;
     line-height: 1.5;
-    height: 100vh;
+
 }
-.detel {
-    margin-left: 8%;
-    margin-top: 15%;
+/* -------------Home Page------------------------- */
+.first-container{
+    height: 93vh;
+    width: 80vw;
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-around;
+}
+.detel{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 .detel h1 {
     font-size: 50px;
@@ -26,24 +35,165 @@ span {
     color: #555;
     line-height: 22px;
 }
-.images {
+.btn-outline-orange {
+    color: orange;
+    background-color: transparent;
+    border-color: orange;
+    border-width: 1px;
+    border-radius: 0px;
+    padding: 6px 15px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+.btn-outline-orange:hover {
+    color: white;
+    background-color: orange;
+}
+.social-media-links{
+    margin: 4px;
+    padding-top: 22px;
+}
+/* .images{
     width: 45%;
-    height: 80%;
+    height: 100%;
     position: absolute;
     bottom: 0;
     right: 100px;
-}
-.images img {
-    height: 100%;
+} */
+/* .images img{
+    max-height: 100%;
     position: absolute;
     left: 50%;
     bottom: 0;
     transform: translate(-50%);
     transition: bottom 1s, left 1s;
-}
-.home-bio {
+}  */
+.images img{
+    height: 93vh;
+} 
+.home-bio{
     line-height: 2;
 }
+.services{
+    padding: 100px 0;
+    background-color: #eef4ed;
+}
+.max-width{
+    max-width: 1300px;
+    padding: 0 45px;
+    margin: auto;
+}
+.max-width h1{
+    color: orange;
+    text-align: center;
+    position: relative;
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+}
+.max-width h1::after{
+    content:'';
+    position: absolute;
+    width: 170px;
+    height: 3px;
+    background-color: black;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+}
+.content{
+    display: flex;
+    justify-content: space-between;
+}
+.card{
+    padding: 50px 25px;
+    width: calc(40% - 120px);
+    border-radius: 6px;
+    border-color: orange;
+    background: #eef4ed;
+    text-align: center;
+    user-select: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+.card:hover{
+    background-color: orange;
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+}
+.box{
+    transition: all 0.3s ease;
+}
+.card:hover .box{
+    transform: scale(1.05);
+}
+.box i{
+    font-size: 50px;
+    color: orange;
+    transition: color 0.3s ease;
+}
+.card:hover .box i{
+    color: #eef4ed;
+}
+.box h3{
+    font-size: 25px;
+    padding: 10px 0 7px;
+}
+
+/* @media screen and (max-width:1190px) {
+    .max-width{
+        padding: 0 25px;
+    }
+    .card{
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+    }
+}
+@media screen and (max-width:700px) {
+    .card{
+        width: 100%;
+    }
+} */
+.second-container{
+    background-color: #eef4ed;
+    padding: 20px;
+}
+
+.section-header {
+    margin-top: 20px;
+    color: orange;
+}
+.third-container{
+    background-color: #4169e1;
+}
+
+.footer{
+    background-color: #555;
+    color: white;
+}
+.footer h3 {
+    margin-top: 30px;
+}
+.social-media {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+.social-media li {
+    margin-right: 25px;
+}
+
+.social-link {
+    color: white;
+    font-size: 22px;
+    text-decoration: none;
+}
+.social-media a.social-link:hover {
+    color: white;
+}
+/* -------------End of Home Page------------------------- */
 
 /* --------------------------- Contact Page---------------------------------- */
 .contact {
