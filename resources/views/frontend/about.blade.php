@@ -24,4 +24,47 @@
             </div>
         </div>
     </section>
+    <div class="container">
+        <h1 style="text-align: center">Images</h1>
+    </div>
+    <div class="img-container container">
+
+        <div class="panel"
+             style="background-image: url({{ asset('images/img1.jpg') }});">
+
+        </div>
+        <div class="panel active"
+             style="background-image: url({{ asset('images/img2.jpg') }});">
+
+        </div>
+
+        <div class="panel"
+             style="background-image: url({{ asset('images/img3.jpg') }});">
+
+        </div>
+        <div class="panel"
+             style="background-image: url({{ asset('images/img4.jpg') }});">
+
+        </div>
+        <div class="panel"
+             style="background-image: url({{ asset('images/img5.jpg') }});">
+
+        </div>
+        {{--        <div class="panel"--}}
+        {{--             style="background-image: url({{ asset('images/img6.jpg') }});">--}}
+
+        {{--        </div>--}}
+        {{--        <div class="panel"--}}
+        {{--             style="background-image: url({{ asset('images/img7.jpg') }});">--}}
+
+        {{--        </div>--}}
+        {{--        <div class="panel"--}}
+        {{--             style="background-image: url({{ asset('images/img8.jpg') }});" loading="lazy">--}}
+
+        {{--        </div>--}}
+    </div>
+
+    @section('scripts')
+        <script src="{{ asset('js/about.js') }}" defer></script>
+    @endsection
 @endsection
