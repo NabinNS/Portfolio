@@ -21,11 +21,11 @@
             <a href="#" class="btn btn-outline-secondary">Contact Me </a>
             <div class="social-media-links mt-5 text-center">
                 <a href="https://www.facebook.com" class="social-link mr-5"><i class="fab fa-facebook-f fa-lg"
-                                                                               style="color:orange"></i></a>
+                                                                               style="color:#AB372E"></i></a>
                 <a href="https://www.twitter.com" class="social-link mr-5"><i class="fab fa-twitter fa-lg"
-                                                                              style="color:orange"></i></a>
+                                                                              style="color:#AB372E"></i></a>
                 <a href="https://www.instagram.com" class="social-link mr-5"><i class="fab fa-instagram fa-lg"
-                                                                                style="color:orange"></i></a>
+                                                                                style="color:#AB372E"></i></a>
             </div>
         </div>
         <div class="images">
