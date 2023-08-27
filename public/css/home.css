@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: #eef4ed;
+    background-color: #D4D1CB;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -46,7 +46,7 @@ main {
 }
 
 span {
-    color: #FFDB58;
+    color: #AB372E;
 }
 
 .detel p {
@@ -55,9 +55,9 @@ span {
 }
 
 .btn-outline-orange {
-    color: orange;
+    color: #AB372E;
     background-color: transparent;
-    border-color: orange;
+    border-color: #AB372E;
     border-width: 1px;
     border-radius: 0px;
     padding: 6px 15px;
@@ -67,7 +67,7 @@ span {
 
 .btn-outline-orange:hover {
     color: white;
-    background-color: orange;
+    background-color: #AB372E;
 }
 
 .social-media-links {
@@ -98,7 +98,7 @@ span {
     line-height: 2;
 }
 
-
+/* ------------------Services------------------------- */
 .max-width {
     max-width: 1300px;
     padding: 0 45px;
@@ -106,7 +106,7 @@ span {
 }
 
 .max-width h1 {
-    color: orange;
+    color: #AB372E;
     text-align: center;
     position: relative;
     font-size: 40px;
@@ -120,7 +120,7 @@ span {
     position: absolute;
     width: 170px;
     height: 3px;
-    background-color: black;
+    background-color: #1E1613;
     bottom: 0;
     left: 50%;
     transform: translate(-50%);
@@ -134,9 +134,10 @@ span {
 .card {
     padding: 50px 25px;
     margin: 0 1rem;
-    border-radius: 6px;
-    border-color: orange;
-    background: #eef4ed;
+    border-radius: 24px;
+    border: solid 3px;
+    border-color: #AB372E;
+    background: #D4D1CB;
     text-align: center;
     user-select: none;
     cursor: pointer;
@@ -145,7 +146,7 @@ span {
 }
 
 .card:hover {
-    background-color: orange;
+    background-color: #AB372E;
     box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
 }
 
@@ -159,12 +160,12 @@ span {
 
 .box i {
     font-size: 50px;
-    color: orange;
+    color: #AB372E;
     transition: color 0.3s ease;
 }
 
 .card:hover .box i {
-    color: #eef4ed;
+    color: #D4D1CB;
 }
 
 .box h3 {
@@ -172,33 +173,47 @@ span {
     padding: 10px 0 7px;
 }
 
-/* @media screen and (max-width:1190px) {
-    .max-width{
+@media screen and (max-width: 1190px) {
+    .max-width {
         padding: 0 25px;
     }
-    .card{
-        width: calc(50% - 10px);
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .card {
+        width: 100%;
         margin-bottom: 20px;
     }
 }
-@media screen and (max-width:700px) {
-    .card{
-        width: 100%;
+
+@media screen and (max-width: 700px) {
+    .max-width {
+        padding: 0 15px;
     }
-} */
+    .card {
+        padding: 25px 15px;
+    }
+    .box h3 {
+        font-size: 20px;
+    }
+}
+
+/* ----------------------------End of Services------------------------- */
+
 .second-container {
-    background-color: #eef4ed;
+    background-color: #D4D1CB;
     padding: 20px;
 }
 
 .section-header {
     margin-top: 20px;
-    color: orange;
+    color: #AB372E;
 }
 
-
+/*--------------------------------Footer--------------------------------------------- */
 .footer {
-    background-color: #FFDB58;
+    background-color: #AB372E;
     margin-top: 4rem;
     color: white;
 }
@@ -269,7 +284,7 @@ span {
 .content .title {
     font-size: 2rem;
     font-weight: 700;
-    color: #FFDB58;
+    color: #AB372E;
 }
 
 .content form {
@@ -303,7 +318,7 @@ span {
 .content .input-box input:focus,
 .content .input-box input:valid {
     background-color: #ffffff;
-    border-color: #FFDB58;
+    border-color: #AB372E;
 }
 
 .content .input-box label {
@@ -328,7 +343,7 @@ span {
 .content .input-box input:valid ~ label {
     top: 0;
     left: 1rem;
-    color: #FFDB58;
+    color: #AB372E;
     background-color: #ffffff;
 }
 
@@ -355,7 +370,7 @@ span {
 }
 
 .content .message-box textarea:focus {
-    border-color: #FFDB58;
+    border-color: #AB372E;
     background-color: #ffffff;
 }
 
@@ -371,13 +386,13 @@ span {
 .content .message-box textarea:focus ~ label {
     left: 12px;
     top: -10px;
-    color: #FFDB58;
+    color: #AB372E;
     background: #ffffff;
 }
 
 .content .input-box input[type="submit"] {
     color: #ffffff;
-    background: #FFDB58;
+    background: #AB372E;
     cursor: pointer;
     padding-left: 0;
     letter-spacing: 1;
@@ -391,7 +406,7 @@ span {
 }
 
 .content .input-box input[type="submit"]:hover {
-    background-color: #ffbf00;
+    background-color: #AB372E;
 }
 
 @media (max-width: 1000px) {
@@ -415,7 +430,7 @@ span {
     }
 }
 
-/* -------------------------------q------------------------------------------- */
+/* -------------------------------End of Contact Page------------------------------------------- */
 /* ------------------------------About Section-------------------------------- */
 .about {
     height: 95vh;
@@ -453,7 +468,7 @@ span {
 }
 
 .about-text span {
-    color: orange;
+    color: #AB372E;
 }
 
 .about-text p {
@@ -461,8 +476,8 @@ span {
 }
 
 .about-text a {
-    background: orange;
-    color: #eef4ed;
+    background: #AB372E;
+    color: #D4D1CB;
     text-decoration: none;
     border: 2px solid transparent;
     padding: 10px;
@@ -471,7 +486,7 @@ span {
 }
 
 .about-text a:hover {
-    background-color: #ffbf00;
+    background-color: #AB372E;
 }
 
-/* -------------------------------------------------------------------------- */
+/* --------------------------End of About Page------------------------------------------------ */

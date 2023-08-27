@@ -25,14 +25,14 @@
         .navbar-nav a.nav-item.nav-link {
             padding: 6px 15px;
             border-radius: 20px;
-            color: #FFDB58;
+            color: #800000;
             margin: 0 10px;
             font-weight: 600;
         }
 
         .navbar-nav a.nav-item.nav-link.active,
         .navbar-nav a.nav-item.nav-link:hover {
-            background: #FFDB58;
+            background: #800000;
             color: white;
             transition: color 0.3s;
         }
@@ -41,8 +41,8 @@
 </head>
 
 <body>
-<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #eef4ed;">
-    <a class="navbar-brand navbar-brand-orange" href="#" style="color:orange; font-weight: bold;">Shraddha </a>
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #D4D1CB;">
+    <a class="navbar-brand navbar-brand-orange" href="#" style="color:#AB372E; font-weight: bold;">Shraddha </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
             aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
