@@ -1,4 +1,7 @@
 @extends('layouts.app')
+@section('styles')
+    <link rel="stylesheet" href="{{ asset('css/about.css') }}">
+@endsection
 @section('content')
     <section class="about container mt-5">
         <div class="about-box">

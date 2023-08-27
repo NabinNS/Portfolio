@@ -20,6 +20,7 @@
             integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
             crossorigin="anonymous"></script>
     <link rel="stylesheet" href="{{ asset('css/home.css') }}"/>
+    @yield('styles')
     <title>Portfolio</title>
     <style>
         .navbar-nav a.nav-item.nav-link {
