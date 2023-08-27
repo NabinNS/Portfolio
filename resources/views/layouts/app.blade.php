@@ -21,6 +21,7 @@
             crossorigin="anonymous"></script>
     <link rel="stylesheet" href="{{ asset('css/home.css') }}"/>
     @yield('styles')
+    @yield('scripts')
     <title>Portfolio</title>
     <style>
         .navbar-nav a.nav-item.nav-link {
