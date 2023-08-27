@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\backend\NavController;
 use App\Http\Controllers\frontend\NavigationController;
 use Illuminate\Support\Facades\Route;
 
@@ -19,3 +20,12 @@ Route::get('/', [NavigationController::class, 'homepage'] )->name('home');
 Route::get('/bio', [NavigationController::class, 'biopage'] )->name('bio');
 Route::get('/contact', [NavigationController::class, 'contactpage'] )->name('contact');
 Route::get('/about', [NavigationController::class, 'aboutpage'] )->name('about');
+
+
+
+
+
+
+
+//backend route
+Route::get('admin/home',[NavController::class,'homepage']);

@@ -57,6 +57,7 @@
             <a class="nav-item nav-link mx-3 {{ request()->is('about') ? 'active' : '' }}" href="{{ route('about') }}">About</a>
             <a class="nav-item nav-link mx-3 {{ request()->is('contact') ? 'active' : '' }}"
                href="{{ route('contact') }}">Contact</a>
+               <a class="nav-item nav-link mx-3" href="admin/home">Backend</a>
         </div>
     </div>
 </nav>
