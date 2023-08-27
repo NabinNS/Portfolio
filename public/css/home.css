@@ -416,3 +416,62 @@ span {
 }
 
 /* -------------------------------q------------------------------------------- */
+/* ------------------------------About Section-------------------------------- */
+.about {
+    height: 95vh;
+}
+
+.about-box {
+    width: 1190px;
+    max-width: 95%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.about img {
+    height: auto;
+    width: 420px;
+    border-radius: 8px;
+    box-shadow: 5px 10px 10px rgba(191, 196, 190, 0.3);
+}
+
+.about-text {
+    width: 45%;
+}
+
+.about-text h1 {
+    text-transform: capitalize;
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.about-text h5 {
+    text-transform: capitalize;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.about-text span {
+    color: orange;
+}
+
+.about-text p {
+    text-align: justify;
+}
+
+.about-text a {
+    background: orange;
+    color: #eef4ed;
+    text-decoration: none;
+    border: 2px solid transparent;
+    padding: 10px;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+.about-text a:hover {
+    background-color: #ffbf00;
+}
+
+/* -------------------------------------------------------------------------- */
