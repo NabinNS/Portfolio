@@ -1,10 +1,11 @@
 /* --------------------------- Contact Page---------------------------------- */
 .contact {
-    height: 100vh;
+    height: 100%;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 2rem;
 }
 
 .contact-container {
@@ -16,44 +17,43 @@
     -moz-border-radius: 12px;
     -ms-border-radius: 12px;
     -o-border-radius: 12px;
-    margin: 0 2rem;
+    margin: 0 auto;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
 }
 
-.contact-container .content {
+.contact-container .form-content {
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    padding: 25px 20px;
+    justify-content: space-between;
 }
 
-.content .image-box {
+.form-content .image-box {
     max-width: 55%;
 }
 
-.content .image-box img {
+.form-content .image-box img {
+    margin-left: 1rem;
     max-width: 100%;
 }
 
-.content .title {
+.form-content .title {
     font-size: 2rem;
     font-weight: 700;
     color: #AB372E;
 }
 
-.content form {
+.form-content form {
     width: 40%;
-    margin-right: 30px;
 }
 
-.content .input-box {
+.form-content .input-box {
     height: 50px;
     width: 100%;
     margin: 16px 0;
     position: relative;
 }
 
-.content .input-box input {
+.form-content .input-box input {
     position: absolute;
     height: 100%;
     width: 100%;
@@ -69,13 +69,13 @@
     -o-border-radius: 6px;
 }
 
-.content .input-box input:focus,
-.content .input-box input:valid {
+.form-content .input-box input:focus,
+.form-content .input-box input:valid {
     background-color: #ffffff;
     border-color: #AB372E;
 }
 
-.content .input-box label {
+.form-content .input-box label {
     position: absolute;
     top: 50%;
     left: 1.2rem;
@@ -93,20 +93,20 @@
     -o-transition: all 0.3s ease-in-out;
 }
 
-.content .input-box input:focus ~ label,
-.content .input-box input:valid ~ label {
+.form-content .input-box input:focus ~ label,
+.form-content .input-box input:valid ~ label {
     top: 0;
     left: 1rem;
     color: #AB372E;
     background-color: #ffffff;
 }
 
-.content .message-box {
+.form-content .message-box {
     min-height: 100px;
     position: relative;
 }
 
-.content .message-box textarea {
+.form-content .message-box textarea {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -123,12 +123,12 @@
     -o-border-radius: 6px;
 }
 
-.content .message-box textarea:focus {
+.form-content .message-box textarea:focus {
     border-color: #AB372E;
     background-color: #ffffff;
 }
 
-.content .message-box label {
+.form-content .message-box label {
     position: absolute;
     top: 9px;
     pointer-events: none;
@@ -137,14 +137,14 @@
     transition: all 0.3s ease-in-out;
 }
 
-.content .message-box textarea:focus ~ label {
+.form-content .message-box textarea:focus ~ label {
     left: 12px;
     top: -10px;
     color: #AB372E;
     background: #ffffff;
 }
 
-.content .input-box input[type="submit"] {
+.form-content .input-box input[type="submit"] {
     color: #ffffff;
     background: #AB372E;
     cursor: pointer;
@@ -159,28 +159,32 @@
     -o-transition: all 0.3s ease-in-out;
 }
 
-.content .input-box input[type="submit"]:hover {
+.form-content .input-box input[type="submit"]:hover {
     background-color: #AB372E;
 }
 
 @media (max-width: 1000px) {
-    .content .image-box {
-        max-width: 70%;
+    .form-content .image-box {
+        max-width: 60%;
     }
 
-    .content {
+    .contact-container {
+        max-width: 90%;
+    }
+
+    .form-content {
         padding: 10px 0;
     }
 }
 
 @media (max-width: 900px) {
-    .content .image-box {
+    .form-content .image-box {
         display: none;
     }
 
-    .content form {
+
+    .form-content form {
         width: 100%;
-        margin-right: 30px;
     }
 }
 

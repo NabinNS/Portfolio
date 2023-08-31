@@ -5,12 +5,12 @@
 @section('content')
     <section class="contact">
         <div class="contact-container">
-            <div class="content">
+            <div class="form-content">
                 <div class="image-box">
                     <img src="{{ asset('images/ContactUs.jpg') }}" alt="Contact Us">
                 </div>
 
-                <form action="">
+                <form action="" class="container">
                     <p class="title">Send us a message</p>
                     <div class="input-box">
                         <input type="text" required>

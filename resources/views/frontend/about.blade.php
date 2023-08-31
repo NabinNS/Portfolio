@@ -27,43 +27,27 @@
     <div class="container">
         <h1 style="text-align: center">Images</h1>
     </div>
-    <div class="img-container container">
-
-        <div class="panel"
-             style="background-image: url({{ asset('images/img1.jpg') }});">
-
+    <div class="container">
+        <div id="imgSlider" class="carousel slide h-50" data-bs-ride="carousel" data-bs-interval="2000">
+            <div class="carousel-inner">
+                <div class="carousel-item">
+                    <img src="{{ asset('images/img1.jpg') }}" class="d-block w-100 image-height" alt="Image 1">
+                </div>
+                <div class="carousel-item active">
+                    <img src="{{ asset('images/img2.jpg') }}" class="d-block w-100 image-height" alt="Image 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{ asset('images/img3.jpg') }}" class="d-block w-100 image-height" alt="Image 3">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#imgSlider" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#imgSlider" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
         </div>
-        <div class="panel active"
-             style="background-image: url({{ asset('images/img2.jpg') }});">
-
-        </div>
-
-        <div class="panel"
-             style="background-image: url({{ asset('images/img3.jpg') }});">
-
-        </div>
-        <div class="panel"
-             style="background-image: url({{ asset('images/img4.jpg') }});">
-
-        </div>
-        <div class="panel"
-             style="background-image: url({{ asset('images/img5.jpg') }});">
-
-        </div>
-        {{--        <div class="panel"--}}
-        {{--             style="background-image: url({{ asset('images/img6.jpg') }});">--}}
-
-        {{--        </div>--}}
-        {{--        <div class="panel"--}}
-        {{--             style="background-image: url({{ asset('images/img7.jpg') }});">--}}
-
-        {{--        </div>--}}
-        {{--        <div class="panel"--}}
-        {{--             style="background-image: url({{ asset('images/img8.jpg') }});" loading="lazy">--}}
-
-        {{--        </div>--}}
     </div>
-
     @section('scripts')
         <script src="{{ asset('js/about.js') }}" defer></script>
     @endsection

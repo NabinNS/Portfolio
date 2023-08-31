@@ -1,6 +1,6 @@
 /* ------------------------------About Section-------------------------------- */
 .about {
-    height: 95vh;
+    height: 95%;
 }
 
 .about-box {
@@ -56,44 +56,9 @@
     background-color: #AB372E;
 }
 
-.img-container {
-    display: flex;
-    width: 90vw;
-}
-
-.panel {
-    background-size: auto 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 80vh;
-    border-radius: 50px;
-    color: white;
-    cursor: pointer;
-    flex: 0.5;
-    margin: 10px;
-    position: relative;
-    transition: all 0.7s ease-in;
-}
-
-
-.panel.active {
-    flex: 5;
-}
-
-@media (max-width: 800px) {
-    .img-container {
-        flex-direction: column;
-        height: 100vh;
-    }
-
-
-    .panel {
-        background-size: 100%;
-    }
-
-    .panel.active {
-        flex-grow: 1.5;
-    }
+.image-height {
+    max-height: 750px;
+    margin: 0 auto;
 }
 
 /* --------------------------End of About Page------------------------------------------------ */
