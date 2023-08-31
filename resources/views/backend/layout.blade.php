@@ -1,5 +1,3 @@
-{{-- <link rel="stylesheet" href="{{ asset('css/backend/sidebar.css') }}" /> --}}
-
 <!DOCTYPE html>
 <!-- Created by CodingLab |www.youtube.com/CodingLabYT-->
 <html lang="en" dir="ltr">
@@ -8,7 +6,7 @@
     <meta charset="UTF-8">
     <title> Shraddha Shrestha </title>
     @yield('styles')
-    
+
     <link rel="stylesheet" href="{{ asset('css/backend/sidebar.css') }}" />
     <!-- Boxicons CDN Link -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
@@ -32,18 +30,20 @@
     </script>
 
     {{-- jquery cdn --}}
-    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+        crossorigin="anonymous"></script>
 </head>
 
 <body>
     <div class="sidebar open">
+
         <div class="logo-details">
             <div class="logo_name">Shraddha</div>
             <i class='bx bx-menu' id="btn"></i>
         </div>
         <ul class="nav-list">
             <li>
-                <a href="#">
+                <a href="{{ route('admin.home') }}">
                     <i class='bx bx-home-heart'></i>
                     <span class="links_name">Home</span>
                 </a>
@@ -57,21 +57,21 @@
                 <span class="tooltip">Bio</span>
             </li>
             <li>
-                <a href="#">
+                <a href="{{ route('admin.contact') }}">
                     <i class='bx bxs-contact'></i>
                     <span class="links_name">Contact</span>
                 </a>
                 <span class="tooltip">Contact</span>
             </li>
             <li>
-                <a href="#">
+                <a href="{{ route('admin.story') }}">
                     <i class='bx bx-chat'></i>
                     <span class="links_name">Story</span>
                 </a>
                 <span class="tooltip">Story</span>
             </li>
             <li>
-                <a href="#">
+                <a href="{{ route('admin.setting') }}">
                     <i class='bx bx-cog'></i>
                     <span class="links_name">Setting</span>
                 </a>
