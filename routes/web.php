@@ -16,10 +16,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('/', [NavigationController::class, 'homepage'] )->name('home');
-Route::get('/bio', [NavigationController::class, 'biopage'] )->name('bio');
-Route::get('/contact', [NavigationController::class, 'contactpage'] )->name('contact');
-Route::get('/about', [NavigationController::class, 'aboutpage'] )->name('about');
+Route::get('/', [NavigationController::class, 'homepage'])->name('home');
+Route::get('/bio', [NavigationController::class, 'biopage'])->name('bio');
+Route::get('/contact', [NavigationController::class, 'contactpage'])->name('contact');
+Route::get('/about', [NavigationController::class, 'aboutpage'])->name('about');
 
 
 
@@ -28,4 +28,7 @@ Route::get('/about', [NavigationController::class, 'aboutpage'] )->name('about')
 
 
 //backend route
-Route::get('admin/home',[NavController::class,'homepage']);
+Route::get('/admin/home', [NavController::class, 'homepage'])->name('admin.home');
+Route::get('/admin/setting', [NavController::class, 'settingpage'])->name('admin.setting');
+Route::get('/admin/contact', [NavController::class, 'contactpage'])->name('admin.contact');
+Route::get('/admin/story', [NavController::class, 'storypage'])->name('admin.story');

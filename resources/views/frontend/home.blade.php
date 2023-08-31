@@ -1,6 +1,7 @@
 @extends('layouts.app')
 @section('content')
     <section class="home">
+        
         <div class="detel">
             <h5>Hello, my name is </h5>
             <h1>Shraddha <span>Shrestha </span></h1>
@@ -66,32 +67,5 @@
             </div>
         </div>
 
-    </section>
-    <section class="section-container">
-        <h2 class="section-header">Exploring New Horizons</h2>
-        <p>
-            As a dedicated professional with a passion for innovation and excellence, I've embarked on a transformative
-            journey in the realms of insurance and real estate. With a profound commitment to delivering exceptional
-            value, I've led as a CEO, navigating the intricate landscape of these industries.
-        </p>
-        <p>
-            My role as a podcaster allows me to share insights, narratives, and thought-provoking discussions on a range
-            of topics. This platform serves as an avenue to connect, inspire, and engage with a diverse audience,
-            fostering meaningful conversations that resonate with our shared experiences.
-        </p>
-        <p>
-            Beyond the boardroom and the microphone, I thrive on exploring the synergy between business ventures,
-            property endeavors, and the world of podcasts. This convergence creates a dynamic and vibrant tapestry,
-            offering a unique blend of perspectives and opportunities.
-        </p>
-    </section>
-    <section class="section-container">
-        <h2 class="section-header">About</h2>
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui tenetur dolorum harum aperiam ratione pariatur
-            quo impedit, sint iure nihil eius repudiandae voluptatem labore dolor vitae omnis inventore cum perspiciatis
-            quis? Modi mollitia ipsa expedita nostrum voluptate suscipit eius vel, tenetur aliquid, enim provident iste
-            velit culpa quibusdam ad saepe, est eligendi ducimus? Autem, eum?
-        </p>
     </section>
 @endsection

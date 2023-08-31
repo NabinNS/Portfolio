@@ -10,4 +10,11 @@ class NavController extends Controller
     public function homepage(){
         return view('backend.home');
     }
+
+    public function settingpage(){
+        return view('backend.setting');
+    }
+    public function storypage(){
+        return view('backend.story');
+    }
 }
