@@ -43,8 +43,6 @@
 @endsection
 
 @section('content')
-
-
     <div class="heading">
         <h4>
             List of Stories
@@ -94,38 +92,39 @@
     </table>
 
 
-  
-  <!-- Modal -->
-  <div class="modal fade" id="AddStoryModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Add New Story</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-            <div class="row">
-                <div class="col-md-12">
-                    <label for="name" class="form-label">Title:</label>
-                    <input type="text" class="form-control" name="name" id="name" placeholder="Title for your writing">
+
+    <!-- Modal -->
+    <div class="modal fade" id="AddStoryModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Add New Story</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
-                <div class="col-md-12 mt-2">
-                    <label for="description" class="form-label">Story:</label>
-                    <textarea class="form-control" id="description" name="description" rows="5" placeholder="What are you thinking"></textarea>
-                </div>
+                <form action="{{ route('admin.savestory') }}" method="GET">
+                    <div class="modal-body">
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label for="name" class="form-label">Title:</label>
+                                <input type="text" class="form-control" name="title" id="name"
+                                    placeholder="Title for your writing">
+                            </div>
+                            <div class="col-md-12 mt-2">
+                                <label for="description" class="form-label">Story:</label>
+                                <textarea class="form-control" id="description" name="story" rows="5" placeholder="What are you thinking"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer d-flex justify-content-center">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-success">Save changes</button>
+                    </div>
+                </form>
             </div>
         </div>
-        <div class="modal-footer d-flex justify-content-center">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-success">Save changes</button>
-        </div>
-        
-      </div>
     </div>
-  </div>
-
-
-
 @endsection

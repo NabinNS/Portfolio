@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\backend\LogicController;
 use App\Http\Controllers\backend\NavController;
 use App\Http\Controllers\frontend\NavigationController;
 use Illuminate\Support\Facades\Route;
@@ -31,3 +32,7 @@ Route::get('/about', [NavigationController::class, 'aboutpage'])->name('about');
 Route::get('/admin/home', [NavController::class, 'homepage'])->name('admin.home');
 Route::get('/admin/setting', [NavController::class, 'settingpage'])->name('admin.setting');
 Route::get('/admin/story', [NavController::class, 'storypage'])->name('admin.story');
+//add story to db
+Route::get('/story/save', [LogicController::class, 'saveStory'])->name('admin.savestory');
+
+
