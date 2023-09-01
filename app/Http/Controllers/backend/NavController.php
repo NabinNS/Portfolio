@@ -21,6 +21,11 @@ class NavController extends Controller
         return view('backend.story');
     }
 
+    public function contactpage()
+    {
+        return view('backend.contact');
+    }
+
     public function loginpage()
     {
         return view('backend.login');
