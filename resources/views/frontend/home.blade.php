@@ -20,12 +20,12 @@
             <a href="#" class="btn btn-outline-orange">View More </a>
             <br>
             <a href="#" class="btn btn-outline-secondary">Contact Me </a>
-            <div class="social-media-links mt-5 text-center">
-                <a href="https://www.facebook.com" class="social-link mr-5"><i class="fab fa-facebook-f fa-lg"
+            <div class="social-media-links mt-3 text-center">
+                <a href="https://www.facebook.com" class="social-link ms-5"><i class="fab fa-facebook-f fa-lg"
                                                                                style="color:#AB372E"></i></a>
-                <a href="https://www.twitter.com" class="social-link mr-5"><i class="fab fa-twitter fa-lg"
+                <a href="https://www.twitter.com" class="social-link ms-5"><i class="fab fa-twitter fa-lg"
                                                                               style="color:#AB372E"></i></a>
-                <a href="https://www.instagram.com" class="social-link mr-5"><i class="fab fa-instagram fa-lg"
+                <a href="https://www.instagram.com" class="social-link ms-5"><i class="fab fa-instagram fa-lg"
                                                                                 style="color:#AB372E"></i></a>
             </div>
         </div>
