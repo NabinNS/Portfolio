@@ -39,6 +39,10 @@
             background-color: #800000;
             /* Dark Maroon Color */
         }
+
+        .story-line-height {
+            line-height: 1.5;
+        }
     </style>
 @endsection
 
@@ -63,37 +67,37 @@
             </tr>
         </thead>
         <tbody>
-
-            <tr>
-                <td>1</td>
-                <td>Starting Point</td>
-                <td class="col-md-6">
-                    <div class="description">
-
-
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, id corrupti
-                        modi laudantium
-                        perspiciatis illum assumenda sapiente pariatur facilis fugiat ipsam, sed, incidunt earum excepturi
-                        vitae
-                        eos exercitationem eius cupiditate?
-                    </div>
-                </td>
-                <td>2023-2-2</td>
-                <td>
-                    <a href="#"><i class="fa fa-eye icon"></i></a>
-                    <a href="#"><i class="fa fa-trash"></i></a>
-                    <a href="#"><i class="fas fa-edit"></i></a>
-
-
-                </td>
-
-            </tr>
+            @foreach ($stories as $key => $story)
+                <tr>
+                    <td>{{ $key + 1 }}</td>
+                    <td>{{ $story->title }}</td>
+                    <td class="col-md-6">
+                        <div class="description">
+                            {{ $story->story }}
+                        </div>
+                    </td>
+                    <td>{{ $story->created_at->toDateString() }}</td>
+                    <td>
+                        <button type="button" class="btn view-story btn-link" data-toggle="modal" data-target="#storyModal"
+                            data-title="{{ $story->title }}" data-story="{{ $story->story }}">
+                            <i class="fa fa-eye icon"></i>
+                        </button>
+                        <a href="{{ route('admin.editstory',$story->id) }}"><i class="fas fa-edit mr-3"></i></a>
+                        <a href="{{ route('admin.deletestory', $story->id) }}"><i class="fa fa-trash"></i></a>
+                    </td>
+                </tr>
+            @endforeach
         </tbody>
     </table>
+    {{-- @foreach ($stories as $key => $story)
+        <p>{!! $story->title !!}</p>
+        <p>{!! $story->story !!}</p>
+    @endforeach --}}
 
 
 
-    <!-- Modal -->
+
+    <!-- Modal to add new story-->
     <div class="modal fade" id="AddStoryModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
@@ -105,6 +109,7 @@
                     </button>
                 </div>
                 <form action="{{ route('admin.savestory') }}" method="GET">
+                    @csrf
                     <div class="modal-body">
 
                         <div class="row">
@@ -121,10 +126,47 @@
                     </div>
                     <div class="modal-footer d-flex justify-content-center">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-success">Save changes</button>
+                        <button type="submit" class="btn btn-success">Add Story</button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
+
+
+    {{-- modal to view story on icon click  --}}
+    <div class="modal fade" id="storyModal" tabindex="-1" role="dialog" aria-labelledby="storyModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-success" id="storyModalLabel">Story Details</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <h5 id="modalTitle" class="text-center text-danger"></h5>
+
+                    <h6 id="modalStory" class="story-line-height"></h6>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        $(document).ready(function() {
+            // Handle the click event on the "eye" button
+            $('.view-story').click(function() {
+                var title = $(this).data('title');
+                var story = $(this).data('story');
+
+                // Populate the modal with data
+                $('#modalTitle').text(title);
+                $('#modalStory').html(story);
+            });
+        });
+    </script>
 @endsection

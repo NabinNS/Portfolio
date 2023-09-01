@@ -29,6 +29,11 @@ Route::get('/admin/setting', [NavController::class, 'settingpage'])->name('admin
 Route::get('/admin/story', [NavController::class, 'storypage'])->name('admin.story');
 //add story to db
 Route::get('/story/save', [LogicController::class, 'saveStory'])->name('admin.savestory');
+Route::get('/story/edit/{id}', [LogicController::class, 'editStory'])->name('admin.editstory');
+Route::put('/story/update/{id}', [LogicController::class, 'updateStory'])->name('admin.updatestory');
+Route::get('/story/delete/{id}', [LogicController::class, 'deleteStory'])->name('admin.deletestory');
+
+
 
 
 Route::get('/admin/contact', [NavController::class, 'contactpage'])->name('admin.contact');

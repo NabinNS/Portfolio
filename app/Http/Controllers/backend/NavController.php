@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\backend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Story;
 
 class NavController extends Controller
 {
@@ -18,8 +19,10 @@ class NavController extends Controller
 
     public function storypage()
     {
-        return view('backend.story');
+        $stories = Story::all();
+        return view('backend.story', compact('stories'));
     }
+    
 
     public function contactpage()
     {
