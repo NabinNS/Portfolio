@@ -5,6 +5,9 @@
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
     <style>
         .description {
             max-width: 550px;
@@ -82,8 +85,9 @@
                             data-title="{{ $story->title }}" data-story="{{ $story->story }}">
                             <i class="fa fa-eye icon"></i>
                         </button>
-                        <a href="{{ route('admin.editstory',$story->id) }}"><i class="fas fa-edit mr-3"></i></a>
-                        <a href="{{ route('admin.deletestory', $story->id) }}"><i class="fa fa-trash"></i></a>
+                        <a href="{{ route('admin.editstory', $story->id) }}"><i class="fas fa-edit mr-3"></i></a>
+                        <a href="{{ route('admin.deletestory', $story->id) }}" class="delete-link"><i
+                                class="fa fa-trash"></i></a>
                     </td>
                 </tr>
             @endforeach
@@ -166,6 +170,26 @@
                 // Populate the modal with data
                 $('#modalTitle').text(title);
                 $('#modalStory').html(story);
+            });
+            //delete sweet alert
+            $('.delete-link').on('click', function(e) {
+                e.preventDefault();
+
+                // Use SweetAlert to show a confirmation dialog
+                Swal.fire({
+                    title: 'Are you sure?',
+                    text: 'You won\'t be able to revert this!',
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Yes, delete it!'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        // If the user confirms, proceed with the deletion
+                        window.location.href = $(this).attr('href');
+                    }
+                });
             });
         });
     </script>

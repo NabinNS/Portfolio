@@ -34,7 +34,7 @@ class LogicController extends Controller
         $story = Story::findOrFail($id);
         $story->update([
             'title' => $request->title,
-            'story' => $request->story,
+            'story' => nl2br($request->story),
         ]);
         return redirect()->route('admin.story')->with('success', 'Story updated successfully');
     }
