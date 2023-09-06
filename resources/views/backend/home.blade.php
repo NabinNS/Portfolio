@@ -25,11 +25,12 @@
                                 src="{{ asset('images/shraddha-home.png') }}" alt="Home Image">
                         </div>
                         <div class="col-md-6 d-flex flex-column justify-content-center">
-                            <form>
+                            <form method="POST" action="{{ route('admin.updatehome') }}" enctype="multipart/form-data">
+                                @csrf
                                 <div class="mb-3">
                                     <label for="imageUpload" class="form-label">Home Image:</label>
                                     <div class="input-group">
-                                        <input type="file" class="form-control" id="imageUpload" name="image">
+                                        <input type="file" class="form-control" id="imageUpload" name="profilephoto">
 
                                     </div>
                                 </div>
@@ -61,12 +62,12 @@
                             </ul>
                         </div>
                         <div class="col-md-6 d-flex flex-column justify-content-center">
-                            <form>
+                            <form method="POST" action="{{ route('admin.addservice') }}" enctype="multipart/form-data">
+                                @csrf
                                 <div class="mb-3">
                                     <label for="imageUpload" class="form-label">Logo:</label>
                                     <div class="input-group">
-                                        <input type="file" class="form-control" id="imageUpload" name="image">
-
+                                        <input type="file" class="form-control" id="imageUpload" name="logo">
                                     </div>
                                 </div>
                                 <div class="mb-3">

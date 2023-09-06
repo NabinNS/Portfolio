@@ -64,13 +64,6 @@
                 <span class="tooltip">Bio</span>
             </li>
             <li>
-                <a href="{{ route('admin.contact') }}">
-                    <i class='bx bxs-contact'></i>
-                    <span class="links_name">Contact</span>
-                </a>
-                <span class="tooltip">Contact</span>
-            </li>
-            <li>
                 <a href="{{ route('admin.story') }}">
                     <i class='bx bx-chat'></i>
                     <span class="links_name">Story</span>
