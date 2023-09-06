@@ -1,77 +1,57 @@
 @extends('layouts.app')
 @section('styles')
-    <link rel="stylesheet" href="{{ asset('css/bio.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/about.css') }}">
 @endsection
 @section('content')
-
-<section class="blog container mt-5">
-
-<h1>Blogs</h1>
-
-<h6>
-    Welcome to my CEO's Corner, a blog that unveils the fascinating journey of my career in the insurance and real estate industries. 
-    Join me as I delve into my engaging role as a podcaster, where I explore intriguing topics and engage with remarkable guests. <br/><br/>
-    Within these digital pages, you'll discover a captivating blend of business insights, property ventures, and the world of podcasting, all converging to weave a unique tapestry of experiences. 
-    Come, embark on this enriching journey where I share my expertise, stories, and passions, offering you a glimpse into the multifaceted world of entrepreneurship and podcasting.
-</h6>
-     <br>
-     <div id="blog-post-list" class="card-container">
-
-    <div class="blog-card">
-        <p>6th August 2023</p>
-        <h3>Blog Post Title 1</h3>
-        <p>Short excerpt or summary of the blog post content goes here...</p>
-        <a href="blog-post-1.html"><span>Read More.....</span></a>
+    <section class="about container mt-5">
+        <div class="about-box">
+            <img src="{{ asset('images/img9.jpg') }}" alt="">
+            <div class="about-text">
+                <h1>About Me</h1>
+                <h5>Shraddha <span>Shrestha</span></h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur ex hic, quos repudiandae ut
+                    voluptatem! Accusamus asperiores autem dolores fugit laboriosam laborum magni, nihil nobis pariatur
+                    quis ratione sint temporibus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci
+                    aliquam et quam suscipit! Delectus et, exercitationem laudantium natus nihil provident quas quidem
+                    reprehenderit rerum sint suscipit totam ullam veniam vero.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, architecto dignissimos dolore
+                    dolores, ducimus ipsa ipsum laboriosam laborum libero magni necessitatibus nisi, qui ut. Autem
+                    commodi doloremque eum quia voluptatum.Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Corporis cupiditate illo ipsum maxime
+                    minus, mollitia neque, numquam, perspiciatis quia ratione repellat sequi tempore? Corporis ea,
+                    expedita odio qui repudiandae sit.</p>
+                <a href="{{ route('contact') }}">Let's Talk</a>
+            </div>
+        </div>
+    </section>
+    <div class="container">
+        <h1 style="text-align: center">Images</h1>
     </div>
-
-    <div class="blog-card">
-        <p>6th August 2023</p>
-        <h3>Blog Post Title 2</h3>
-        <p>Short excerpt or summary of the blog post content goes here...</p>
-        <a href="blog-post-2.html"><span>Read More.....</span></a>
+    <div class="container">
+        <div id="imgSlider" class="carousel slide h-50" data-bs-ride="carousel" data-bs-interval="2000">
+            <div class="carousel-inner">
+                <div class="carousel-item">
+                    <img src="{{ asset('images/img1.jpg') }}" class="d-block w-100 image-height" alt="Image 1">
+                </div>
+                <div class="carousel-item active">
+                    <img src="{{ asset('images/img2.jpg') }}" class="d-block w-100 image-height" alt="Image 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{ asset('images/img3.jpg') }}" class="d-block w-100 image-height" alt="Image 3">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#imgSlider" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#imgSlider" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+        </div>
     </div>
-
-    <div class="blog-card">
-        <p>6th August 2023</p>
-        <h3>Blog Post Title 3</h3>
-        <p>Short excerpt or summary of the blog post content goes here...</p>
-        <a href="blog-post-3.html"><span>Read More.....</span></a>
-    </div>
-
-     <div class="blog-card">
-        <p>6th August 2023</p>
-        <h3>Blog Post Title 4</h3>
-        <p>Short excerpt or summary of the blog post content goes here...</p>
-        <a href="blog-post-4.html"><span>Read More.....</span></a>
-    </div>
-
-     <div class="blog-card">
-        <p>6th August 2023</p>
-        <h3>Blog Post Title 3</h3>
-        <p>Short excerpt or summary of the blog post content goes here...</p>
-        <a href="blog-post-5.html"><span>Read More.....</span></a>
-    </div>
-
-     <div class="blog-card">
-        <p>6th August 2023</p>
-        <h3>Blog Post Title 6</h3>
-        <p>Short excerpt or summary of the blog post content goes here...</p>
-        <a href="blog-post-6.html"><span>Read More.....</span></a>
-    </div>
-
-     <div class="blog-card">
-        <p>6th August 2023</p>
-        <h3>Blog Post Title 7</h3>
-        <p>Short excerpt or summary of the blog post content goes here...</p>
-        <a href="blog-post-7.html"><span>Read More.....</span></a>
-    </div>
-
-     <div class="blog-card">
-        <p>6th August 2023</p>
-        <h3>Blog Post Title 8</h3>
-        <p>Short excerpt or summary of the blog post content goes here...</p>
-        <a href="blog-post-8.html"><span>Read More.....</span></a>
-    </div>
-</div>
-</section>
+    @section('scripts')
+        <script src="{{ asset('js/about.js') }}" defer></script>
+    @endsection
 @endsection
+
+
+

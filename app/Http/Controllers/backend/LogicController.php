@@ -4,6 +4,7 @@ namespace App\Http\Controllers\backend;
 
 use App\Http\Controllers\Controller;
 use App\Models\Story;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class LogicController extends Controller
@@ -14,7 +15,8 @@ class LogicController extends Controller
 
         Story::create([
             'title' => $request->title,
-            'story' => nl2br($request->story)
+            'story' => nl2br($request->story),
+            'datePosted' => Carbon::now(),
         ]);
         return back()->with('success', 'New story recorded successfully');
     }

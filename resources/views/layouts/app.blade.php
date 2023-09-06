@@ -50,7 +50,7 @@
             <a class="nav-item nav-link mx-3 {{ request()->is('/') ? 'active' : '' }}" href="/">Home</a>
             <a class="nav-item nav-link mx-3 {{ request()->is('bio') ? 'active' : '' }}"
                href="{{ route('bio') }}">Bio</a>
-            <a class="nav-item nav-link mx-3 {{ request()->is('about') ? 'active' : '' }}" href="{{ route('about') }}">About</a>
+            <a class="nav-item nav-link mx-3 {{ request()->is('posts') ? 'active' : '' }}" href="{{ route('posts') }}">Posts</a>
             <a class="nav-item nav-link mx-3 {{ request()->is('contact') ? 'active' : '' }}"
                href="{{ route('contact') }}">Contact</a>
             <a class="nav-item nav-link mx-3" href="admin/home">Backend</a>

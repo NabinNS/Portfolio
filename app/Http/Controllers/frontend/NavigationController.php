@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Story;
 use Illuminate\Http\Request;
 
 class NavigationController extends Controller
@@ -16,8 +17,9 @@ class NavigationController extends Controller
     public function contactpage(){
         return view('frontend.contact');
     }
-    public function aboutpage(){
-        return view('frontend.about');
+    public function postspage(){
+        $stories = Story::all();
+        return view('frontend.posts',compact('stories'));
     }
  
 }

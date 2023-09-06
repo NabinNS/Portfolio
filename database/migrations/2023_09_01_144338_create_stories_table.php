@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->mediumText('story');
+            $table->date('datePosted');
             $table->timestamps();
         });
     }

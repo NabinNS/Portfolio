@@ -79,7 +79,7 @@
                             {{ $story->story }}
                         </div>
                     </td>
-                    <td>{{ $story->created_at->toDateString() }}</td>
+                    <td>{{ $story->datePosted }}</td>
                     <td>
                         <button type="button" class="btn view-story btn-link" data-toggle="modal" data-target="#storyModal"
                             data-title="{{ $story->title }}" data-story="{{ $story->story }}">
