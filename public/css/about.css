@@ -1,25 +1,18 @@
 /* ------------------------------About Section-------------------------------- */
-.about {
-    height: 95%;
-}
 
-.about-box {
-    width: 1190px;
-    max-width: 95%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
 
-.about img {
-    height: auto;
-    width: 420px;
+.row img {
     border-radius: 8px;
     box-shadow: 5px 10px 10px rgba(191, 196, 190, 0.3);
 }
 
-.about-text {
-    width: 45%;
+.heading {
+    padding: 0 30px;
+    color: #800000;
+    display: inline-block;
+    border-bottom: #800000 3px solid;
+    margin: 20px 0px;
+    font-weight: 600;
 }
 
 .about-text h1 {
