@@ -12,12 +12,12 @@
       
 
      <div id="blog-post-list" class="card-container">
-        @foreach ($stories as $story)
+        @foreach ($posts as $post)
         <div class="blog-card">
-            <p>{{ $story->datePosted }}</p>
-            <h3>{{ $story->title }}</h3>
-            <p class="story-content">{{ $story->story }}</p>
-            <a href="#"><span>Read More.....</span></a>
+            <p>{{ $post->datePosted }}</p>
+            <h3>{{ $post->title }}</h3>
+            <p class="story-content">{{ $post->post }}</p>
+            <a href="{{ route('viewfullpost',$post->id) }}"><span>Read More.....</span></a>
         </div>
         @endforeach
 

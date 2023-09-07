@@ -22,21 +22,23 @@ Route::get('/', [NavigationController::class, 'homepage'])->name('home');
 Route::get('/bio', [NavigationController::class, 'biopage'])->name('bio');
 Route::get('/contact', [NavigationController::class, 'contactpage'])->name('contact');
 Route::get('/posts', [NavigationController::class, 'postspage'])->name('posts');
+//route to show full post 
+Route::get('/viewfullpost/{id}', [NavigationController::class, 'viewfullpost'])->name('viewfullpost');
 
 
 //backend route
 Route::get('/admin/home', [NavController::class, 'homepage'])->name('admin.home');
 Route::get('/admin/setting', [NavController::class, 'settingpage'])->name('admin.setting');
-Route::get('/admin/story', [NavController::class, 'storypage'])->name('admin.story');
+Route::get('/admin/post', [NavController::class, 'postpage'])->name('admin.post');
 //backend home controlling routes
 Route::post('/admin/update/home',[HomeController::class,'updateHome'])->name('admin.updatehome');
 Route::post('/admin/service/add',[HomeController::class,'addService'])->name('admin.addservice');
 
 //Backend story control routes
-Route::get('/story/save', [LogicController::class, 'saveStory'])->name('admin.savestory');
-Route::get('/story/edit/{id}', [LogicController::class, 'editStory'])->name('admin.editstory');
-Route::put('/story/update/{id}', [LogicController::class, 'updateStory'])->name('admin.updatestory');
-Route::get('/story/delete/{id}', [LogicController::class, 'deleteStory'])->name('admin.deletestory');
+Route::get('/post/save', [LogicController::class, 'savePost'])->name('admin.savepost');
+Route::get('/post/edit/{id}', [LogicController::class, 'editPost'])->name('admin.editpost');
+Route::put('/post/update/{id}', [LogicController::class, 'updatePost'])->name('admin.updatepost');
+Route::get('/post/delete/{id}', [LogicController::class, 'deletePost'])->name('admin.deletepost');
 
 
 

@@ -52,11 +52,11 @@
 @section('content')
     <div class="heading">
         <h4>
-            List of Stories
+            List of Posts
         </h4>
     </div>
     <div class="d-flex justify-content-end">
-        <button class="btn btn-outline-success mx-4 my-3" type="button" data-toggle="modal" data-target="#AddStoryModal">Add
+        <button class="btn btn-outline-success mx-4 my-3" type="button" data-toggle="modal" data-target="#AddPostModal">Add
             New</button>
     </div>
     <table class="table table-striped table-hover">
@@ -70,23 +70,23 @@
             </tr>
         </thead>
         <tbody>
-            @foreach ($stories as $key => $story)
+            @foreach ($posts as $key => $post)
                 <tr>
                     <td>{{ $key + 1 }}</td>
-                    <td>{{ $story->title }}</td>
+                    <td>{{ $post->title }}</td>
                     <td class="col-md-6">
                         <div class="description">
-                            {{ $story->story }}
+                            {{ $post->post }}
                         </div>
                     </td>
-                    <td>{{ $story->datePosted }}</td>
+                    <td>{{ $post->datePosted }}</td>
                     <td>
-                        <button type="button" class="btn view-story btn-link" data-toggle="modal" data-target="#storyModal"
-                            data-title="{{ $story->title }}" data-story="{{ $story->story }}">
+                        <button type="button" class="btn view-post btn-link" data-toggle="modal" data-target="#storyModal"
+                            data-title="{{ $post->title }}" data-post="{{ $post->post }}">
                             <i class="fa fa-eye icon"></i>
                         </button>
-                        <a href="{{ route('admin.editstory', $story->id) }}"><i class="fas fa-edit mr-3"></i></a>
-                        <a href="{{ route('admin.deletestory', $story->id) }}" class="delete-link"><i
+                        <a href="{{ route('admin.editpost', $post->id) }}"><i class="fas fa-edit mr-3"></i></a>
+                        <a href="{{ route('admin.deletepost', $post->id) }}" class="delete-link"><i
                                 class="fa fa-trash"></i></a>
                     </td>
                 </tr>
@@ -102,17 +102,17 @@
 
 
     <!-- Modal to add new story-->
-    <div class="modal fade" id="AddStoryModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    <div class="modal fade" id="AddPostModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Add New Story</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Add New Post</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form action="{{ route('admin.savestory') }}" method="GET">
+                <form action="{{ route('admin.savepost') }}" method="GET">
                     @csrf
                     <div class="modal-body">
 
@@ -123,8 +123,8 @@
                                     placeholder="Title for your writing">
                             </div>
                             <div class="col-md-12 mt-2">
-                                <label for="description" class="form-label">Story:</label>
-                                <textarea class="form-control" id="description" name="story" rows="5" placeholder="What are you thinking"></textarea>
+                                <label for="description" class="form-label">Post:</label>
+                                <textarea class="form-control" id="description" name="post" rows="5" placeholder="What are you thinking"></textarea>
                             </div>
                         </div>
                     </div>
@@ -153,7 +153,7 @@
 
                     <h5 id="modalTitle" class="text-center text-danger"></h5>
 
-                    <h6 id="modalStory" class="story-line-height"></h6>
+                    <h6 id="modalPost" class="story-line-height"></h6>
                 </div>
             </div>
         </div>
@@ -163,13 +163,13 @@
     <script>
         $(document).ready(function() {
             // Handle the click event on the "eye" button
-            $('.view-story').click(function() {
+            $('.view-post').click(function() {
                 var title = $(this).data('title');
-                var story = $(this).data('story');
+                var post = $(this).data('post');
 
                 // Populate the modal with data
                 $('#modalTitle').text(title);
-                $('#modalStory').html(story);
+                $('#modalPost').html(post);
             });
             //delete sweet alert
             $('.delete-link').on('click', function(e) {
