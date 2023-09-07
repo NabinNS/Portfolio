@@ -13,17 +13,26 @@
 
         <div id="blog-post-list" class="row">
             <div class="row">
-                @foreach ($stories as $story)
+                @foreach ($posts as $post)
                     <div class="col-12 col-md-4 mb-3">
                         <div class="blog-card">
-                            <p>{{ $story->datePosted }}</p>
-                            <h3>{{ $story->title }}</h3>
-                            <p class="story-content">{{ $story->story }}</p>
+                            <p>{{ $post->datePosted }}</p>
+                            <h3>{{ $post->title }}</h3>
+                            <p class="story-content">{{ $post->post }}</p>
                             <a href="#"><span>Read More.....</span></a>
                         </div>
                     </div>
                 @endforeach
             </div>
+     <div id="blog-post-list" class="card-container">
+        @foreach ($posts as $post)
+        <div class="blog-card">
+            <p>{{ $post->datePosted }}</p>
+            <h3>{{ $post->title }}</h3>
+            <p class="story-content">{{ $post->post }}</p>
+            <a href="{{ route('viewfullpost',$post->id) }}"><span>Read More.....</span></a>
+        </div>
+        @endforeach
 
             {{-- <div class="blog-card">
                 <p>6th August 2023</p>

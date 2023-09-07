@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\backend;
 
 use App\Http\Controllers\Controller;
-use App\Models\Story;
+use App\Models\Post;
 
 class NavController extends Controller
 {
@@ -17,10 +17,10 @@ class NavController extends Controller
         return view('backend.setting');
     }
 
-    public function storypage()
+    public function postpage()
     {
-        $stories = Story::all();
-        return view('backend.story', compact('stories'));
+        $posts = Post::all();
+        return view('backend.post', compact('posts'));
     }
     
 

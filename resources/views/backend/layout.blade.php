@@ -64,11 +64,11 @@
                 <span class="tooltip">Bio</span>
             </li>
             <li>
-                <a href="{{ route('admin.story') }}">
+                <a href="{{ route('admin.post') }}">
                     <i class='bx bx-chat'></i>
-                    <span class="links_name">Story</span>
+                    <span class="links_name">Posts</span>
                 </a>
-                <span class="tooltip">Story</span>
+                <span class="tooltip">Posts</span>
             </li>
             <li>
                 <a href="{{ route('admin.setting') }}">
