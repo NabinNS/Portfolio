@@ -18,7 +18,7 @@ class NavigationController extends Controller
         return view('frontend.contact');
     }
     public function postspage(){
-        $posts = Post::all();
+        $posts = Post::paginate(12);
         return view('frontend.posts',compact('posts'));
     }
     public function viewfullpost($id){

@@ -11,10 +11,24 @@
     <style>
         .description {
             max-width: 550px;
-            white-space: nowrap;
+
+        }
+
+        .tablepost-hidedata {
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            /* Adjust this value to control the number of lines displayed */
+            -webkit-box-orient: vertical;
             overflow: hidden;
             text-overflow: ellipsis;
+            white-space: normal;
         }
+
+        .title {
+            max-width: 100px;
+        }
+
+
 
         .heading {
             position: relative;
@@ -73,10 +87,10 @@
             @foreach ($posts as $key => $post)
                 <tr>
                     <td>{{ $key + 1 }}</td>
-                    <td>{{ $post->title }}</td>
+                    <td class="col-md-2 title tablepost-hidedata">{{ $post->title }}</td>
                     <td class="col-md-6">
-                        <div class="description">
-                            {{ $post->post }}
+                        <div class="description tablepost-hidedata">
+                            {!! $post->post !!}
                         </div>
                     </td>
                     <td>{{ $post->datePosted }}</td>
@@ -103,7 +117,7 @@
 
     <!-- Modal to add new story-->
     <div class="modal fade" id="AddPostModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
+        aria-hidden="true" data-backdrop="static">
         <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -162,6 +176,7 @@
 
     <script>
         $(document).ready(function() {
+
             // Handle the click event on the "eye" button
             $('.view-post').click(function() {
                 var title = $(this).data('title');
@@ -191,6 +206,7 @@
                     }
                 });
             });
+
         });
     </script>
 @endsection

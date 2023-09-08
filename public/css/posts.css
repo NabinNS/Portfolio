@@ -20,7 +20,7 @@
 }
 .story-content {
     display: -webkit-box;
-    -webkit-line-clamp: 2; /* Adjust this value to control the number of lines displayed */
+    -webkit-line-clamp: 3; /* Adjust this value to control the number of lines displayed */
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;

@@ -46,6 +46,6 @@
             <h1 class="post-title">{{ $post->title }}</h1>
         </div>
         <p class="datePosted">{{ $post->datePosted }}</p>
-        <p class="post-body">{{ $post->post }}</p>
+        <p class="post-body">{!! $post->post !!}</p>
     </div>
 @endsection

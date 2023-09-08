@@ -24,7 +24,7 @@
                             </div>
                         </div>
                         <div class="d-flex justify-content-center">
-                            <button type="button" class="btn btn-secondary mt-3">Cancel</button>
+                            <button type="button" class="btn btn-secondary mt-3" id="cancelButton">Cancel</button>
                             <button type="submit" class="btn btn-warning mt-3 ml-2">Update post</button>
                         </div>
                     </form>
@@ -33,4 +33,11 @@
             </div>
         </div>
     </div>
+    <script>
+        $(document).ready(function() {
+            $('#cancelButton').click(function() {
+                window.history.back();
+            });
+        });
+    </script>
 @endsection
