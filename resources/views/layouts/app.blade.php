@@ -60,27 +60,108 @@
 <main>
     @yield('content')
 </main>
-<footer class="footer">
+<!-- Remove the container if you want to extend the Footer to full width. -->
+<!-- Footer -->
+<footer class="footer text-center text-white">
+    <!-- Grid container -->
     <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <h3>Contact Information</h3>
-                <p>Email: shraddhashrestha@gmail.com</p>
-                <p>Phone: +977 980 000 0000</p>
+        <!-- Section: Links -->
+        <section class="mt-3">
+            <!-- Grid row-->
+            <div class="row text-center d-flex justify-content-center pt-3">
+                <!-- Grid column -->
+                <div class="col-md-2">
+                    <h6 class="text-uppercase font-weight-bold">
+                        <a href="{{ route('bio') }}" class="text-white">Bio</a>
+                    </h6>
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-2">
+                    <h6 class="text-uppercase font-weight-bold">
+                        <a href="{{ route('posts') }}" class="text-white">Posts</a>
+                    </h6>
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-2">
+                    <h6 class="text-uppercase font-weight-bold">
+                        <a href="{{ route('contact') }}" class="text-white">Contact</a>
+                    </h6>
+                </div>
+                <!-- Grid column -->
             </div>
-            <div class="col-md-6">
-                <h3>Follow Me</h3>
-                <ul class="social-media">
-                    <li><a href="https://www.facebook.com" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                    </li>
-                    <li><a href="https://www.twitter.com" class="social-link"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="https://www.instagram.com" class="social-link"><i class="fab fa-instagram"></i></a>
-                    </li>
-                </ul>
+            <!-- Grid row-->
+        </section>
+        <!-- Section: Links -->
+
+        <hr class="my-3"/>
+
+        <!-- Section: Text -->
+        <section class="mb-3">
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-8">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
+                        distinctio earum repellat quaerat voluptatibus placeat nam,
+                        commodi optio pariatur est quia magnam eum harum corrupti
+                        dicta, aliquam sequi voluptate quas.
+                    </p>
+                </div>
             </div>
-        </div>
+        </section>
+        <!-- Section: Text -->
+
+        <!-- Section: Social -->
+        <section class="text-center mb-3">
+            <a href="" class="text-white me-4">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="" class="text-white me-4">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="" class="text-white me-4">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </section>
+        <!-- Section: Social -->
     </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div
+        class="text-center p-3"
+        style="background-color: rgba(0, 0, 0, 0.2)"
+    >
+        © 2023 Copyright: Shraddha Shrestha
+    </div>
+    <!-- Copyright -->
 </footer>
+<!-- Footer -->
+
+{{--<footer class="footer">--}}
+{{--    <div class="container">--}}
+{{--        <div class="row">--}}
+{{--            <div class="col-md-6">--}}
+{{--                <h3>Contact Information</h3>--}}
+{{--                <p>Email: shraddhashrestha@gmail.com</p>--}}
+{{--                <p>Phone: +977 980 000 0000</p>--}}
+{{--            </div>--}}
+{{--            <div class="col-md-6">--}}
+{{--                <h3>Follow Me</h3>--}}
+{{--                <ul class="social-media">--}}
+{{--                    <li><a href="https://www.facebook.com" class="social-link"><i class="fab fa-facebook-f"></i></a>--}}
+{{--                    </li>--}}
+{{--                    <li><a href="https://www.twitter.com" class="social-link"><i class="fab fa-twitter"></i></a></li>--}}
+{{--                    <li><a href="https://www.instagram.com" class="social-link"><i class="fab fa-instagram"></i></a>--}}
+{{--                    </li>--}}
+{{--                </ul>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </div>--}}
+{{--</footer>--}}
 </body>
 
 </html>
