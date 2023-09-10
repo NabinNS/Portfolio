@@ -10,24 +10,28 @@ use Illuminate\Http\Request;
 
 class NavigationController extends Controller
 {
-    public function homepage(){
+    public function homepage()
+    {
         $services = Service::all();
         $user = User::first();
         return view('frontend.home', compact('services', 'user'));
     }
-    public function biopage(){
+    public function biopage()
+    {
         return view('frontend.bio');
     }
-    public function contactpage(){
+    public function contactpage()
+    {
         return view('frontend.contact');
     }
-    public function postspage(){
+    public function postspage()
+    {
         $posts = Post::paginate(12);
-        return view('frontend.posts',compact('posts'));
+        return view('frontend.posts', compact('posts'));
     }
-    public function viewfullpost($id){
+    public function viewfullpost($id)
+    {
         $post = Post::findOrFail($id);
-        return view('frontend.viewfullpost',compact('post'));
+        return view('frontend.viewfullpost', compact('post'));
     }
- 
 }

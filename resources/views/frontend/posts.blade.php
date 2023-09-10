@@ -1,7 +1,6 @@
 @extends('layouts.app')
 @section('styles')
     <link rel="stylesheet" href="{{ asset('css/posts.css') }}">
-   
 @endsection
 @section('content')
     <section class="blog container mt-3">
@@ -21,10 +20,16 @@
                 </div>
             @endforeach
         </div>
-        <div class="mt-3 d-flex justify-content-end" >
+        <div class="mt-3 d-flex justify-content-end">
             {{ $posts->links() }}
         </div>
 
+        {{-- <div class="blog-card">
+            <p>6th August 2023</p>
+            <h3>Blog Post Title 1</h3>
+            <p>Short excerpt or summary of the blog post content goes here...</p>
+            <a href="blog-post-1.html"><span>Read More.....</span></a>
+        </div> --}}
+
     </section>
 @endsection
-
