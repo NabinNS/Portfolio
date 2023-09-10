@@ -1,9 +1,17 @@
 /* ------------------------------About Section-------------------------------- */
 
+.row{
+    display: flex;
+    align-items: center;
+    min-height: 200px;
+}
 
 .row img {
+    max-width: 100%;
+    height: auto;
     border-radius: 8px;
     box-shadow: 5px 10px 10px rgba(191, 196, 190, 0.3);
+    margin-right: 20px;
 }
 
 .heading {
@@ -13,6 +21,10 @@
     border-bottom: #800000 3px solid;
     margin: 20px 0px;
     font-weight: 600;
+}
+
+.about-text{
+    flex: 1;
 }
 
 .about-text h1 {
