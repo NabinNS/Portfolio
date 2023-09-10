@@ -4,12 +4,16 @@ namespace App\Http\Controllers\frontend;
 
 use App\Http\Controllers\Controller;
 use App\Models\Post;
+use App\Models\Service;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class NavigationController extends Controller
 {
     public function homepage(){
-        return view('frontend.home');
+        $services = Service::all();
+        $user = User::first();
+        return view('frontend.home', compact('services', 'user'));
     }
     public function biopage(){
         return view('frontend.bio');

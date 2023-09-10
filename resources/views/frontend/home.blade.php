@@ -9,12 +9,11 @@
                 Welcome to my portfolio
                 <p>
                     <br/>
-                    A showcase of my journey as a CEO in the insurance and real estate industries, as well as my
-                    engaging role as a podcaster.
+                    {!! $user->description !!}
+
                 </p>
                 <p>
-                    Explore my world where business, properties, and podcasts converge to create a unique tapestry of
-                    experiences.
+                  
                 </p>
             </h6>
             <a href="#" class="btn btn-outline-orange">View More </a>
@@ -30,42 +29,78 @@
             </div>
         </div>
         <div class="images">
-            <img src="{{ asset('images/shraddha-home.png') }}" alt="profile image" class="girl">
+            <img src="{{ asset('images/' . $user->imagePath) }}" alt="profile image" class="girl">
         </div>
     </section>
     <section class="section-container">
-        <div class="max-width">
-            <h1>Our Services</h1>
-            <div class="content">
-                <div class="card">
-                    <div class="box">
-                        <i class="fa fa-user"></i>
-                        <h3>Service 1</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, hic error. At, cupiditate
-                            inventore. Non, ullam quibusdam. Alias repudiandae quidem numquam temporibus dolorum ab
-                            accusantium, accusamus, totam perspiciatis voluptatum consequatur.</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="box">
-                        <i class="fa fa-handshake"></i>
-                        <h3>Service 2</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, hic error. At, cupiditate
-                            inventore. Non, ullam quibusdam. Alias repudiandae quidem numquam temporibus dolorum ab
-                            accusantium, accusamus, totam perspiciatis voluptatum consequatur.</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="box">
-                        <i class="fa fa-building"></i>
-                        <h3>Service 3</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, hic error. At, cupiditate
-                            inventore. Non, ullam quibusdam. Alias repudiandae quidem numquam temporibus dolorum ab
-                            accusantium, accusamus, totam perspiciatis voluptatum consequatur.</p>
-                    </div>
-                </div>
+        <div class="container">
+           <div class="text-center">
+
+               <h1 class="border-service">Our Services</h1>
             </div>
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <div class="card card-equal-height">
+                            <div class="box">
+                                
+                                <i class="fa fa-user"></i>
+                                <h3>Service 1</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, hic error. At, cupiditate
+                                    inventore. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card card-equal-height">
+                            <div class="box">
+                                <i class="fa fa-handshake"></i>
+                                <h3>Service 2</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, hic error. At, cupiditate
+                                    inventore. Non, ullam quibusdam. Alias repudiandae quidem numquam temporibus dolorum ab
+                                    accusantium, accusamus, totam perspiciatis voluptatum consequatur.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card card-equal-height">
+                            <div class="box">
+                                <i class="fa fa-building"></i>
+                                <h3>Service 3</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, hic error. At, cupiditate
+                                    inventore. Non, ullam quibusdam. Alias repudiandae quidem numquam temporibus dolorum ab
+                                    accusantium, accusamus, totam perspiciatis voluptatum consequatur.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 mb-4">
+                        <div class="card card-equal-height">
+                            <div class="box">
+                                <i class="fa fa-building"></i>
+                                <h3>Service 3</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, hic error. At, cupiditate
+                                    inventore. Non, ullam quibusdam. Alias repudiandae quidem numquam temporibus dolorum ab
+                                    accusantium, accusamus, totam perspiciatis voluptatum consequatur.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 mb-4">
+                        <div class="card card-equal-height">
+                            <div class="box">
+                                <i class="fa fa-building"></i>
+                                <h3>Service 3</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, hic error. At, cupiditate
+                                    inventore. Non, ullam quibusdam. Alias repudiandae quidem numquam temporibus dolorum ab
+                                    accusantium, accusamus, totam perspiciatis voluptatum consequatur.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Add more columns as needed -->
+                </div>
+            
         </div>
+        
 
     </section>
 @endsection

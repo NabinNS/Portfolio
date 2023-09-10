@@ -36,7 +36,8 @@
                                 </div>
                                 <div class="mb-3">
                                     <label for="description" class="form-label">Description:</label>
-                                    <textarea class="form-control" id="description" name="description" rows="5" placeholder="write about yourself"></textarea>
+                                    <textarea class="form-control" id="description" name="description" rows="5" placeholder="Write about yourself">{{ strip_tags($user->description) }}</textarea>
+
                                 </div>
                                 <div class="text-center">
                                     <button class="btn btn-primary me-2" type="submit">Update</button>
@@ -57,8 +58,10 @@
                         <div class="col-md-6 text-center">
                             <h4 class="mb-4 pb-2 border-bottom border-primary">Existing Services</h4>
                             <ul class="list-unstyled">
-                                <li>Yeti</li>
-                                <li>Podcast</li>
+                                @foreach ($services as $service)
+                                    <li>{{ $service->title }}</li>
+                                @endforeach
+                                
                             </ul>
                         </div>
                         <div class="col-md-6 d-flex flex-column justify-content-center">

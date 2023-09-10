@@ -24,14 +24,14 @@ class HomeController extends Controller
         }
         // No new profile photo uploaded, update only the description
 
-        $user->description = $request->description;
+        $user->description = nl2br($request->description);
         $user->save();
 
 
         return redirect()->route('admin.home')->with('success', 'Information updated successfully');
     }
     public function addService(Request $request){
-        $logo = $request->title. $request->logo->extension();
+        $logo = $request->title.'.'.$request->logo->extension();
         $request->logo->move(public_path('images'), $logo);
         Service::create([
             'logoPath' => $logo,
