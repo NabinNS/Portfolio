@@ -7,6 +7,10 @@
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
+    {{-- datatable cdn --}}
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+
 
     <style>
         .description {
@@ -73,7 +77,7 @@
         <button class="btn btn-outline-success mx-4 my-3" type="button" data-toggle="modal" data-target="#AddPostModal">Add
             New</button>
     </div>
-    <table class="table table-striped table-hover">
+    <table class="table table-striped table-hover" id="storyTable">
         <thead>
             <tr>
                 <th>SN</th>
@@ -176,6 +180,9 @@
 
     <script>
         $(document).ready(function() {
+
+            $('#storyTable').DataTable();
+
 
             // Handle the click event on the "eye" button
             $('.view-post').click(function() {

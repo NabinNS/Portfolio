@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\backend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Bio;
 use App\Models\Post;
 use App\Models\Service;
 use App\Models\User;
@@ -39,6 +40,7 @@ class NavController extends Controller
     }
     public function biopage()
     {
-        return view('backend.bio');
+        $bios = Bio::all();
+        return view('backend.bio',compact('bios'));
     }
 }
