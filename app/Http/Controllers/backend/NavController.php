@@ -37,4 +37,8 @@ class NavController extends Controller
     {
         return view('backend.login');
     }
+    public function biopage()
+    {
+        return view('backend.bio');
+    }
 }

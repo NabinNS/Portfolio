@@ -30,6 +30,7 @@ Route::get('/viewfullpost/{id}', [NavigationController::class, 'viewfullpost'])-
 Route::get('/admin/home', [NavController::class, 'homepage'])->name('admin.home');
 Route::get('/admin/setting', [NavController::class, 'settingpage'])->name('admin.setting');
 Route::get('/admin/post', [NavController::class, 'postpage'])->name('admin.post');
+Route::get('/admin/bio', [NavController::class, 'biopage'])->name('admin.bio');
 //backend home controlling routes
 Route::post('/admin/update/home',[HomeController::class,'updateHome'])->name('admin.updatehome');
 Route::post('/admin/service/add',[HomeController::class,'addService'])->name('admin.addservice');

@@ -57,7 +57,7 @@
                 <span class="tooltip">Home</span>
             </li>
             <li>
-                <a href="#">
+                <a href="{{ route('admin.bio') }}">
                     <i class='bx bx-user'></i>
                     <span class="links_name">Bio</span>
                 </a>

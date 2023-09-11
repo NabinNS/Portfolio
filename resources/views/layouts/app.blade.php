@@ -65,50 +65,15 @@
 <footer class="footer text-center text-white">
     <!-- Grid container -->
     <div class="container">
-        <!-- Section: Links -->
-        <section class="mt-3">
-            <!-- Grid row-->
-            <div class="row text-center d-flex justify-content-center pt-3">
-                <!-- Grid column -->
-                <div class="col-md-2">
-                    <h6 class="text-uppercase font-weight-bold">
-                        <a href="{{ route('bio') }}" class="text-white">Bio</a>
-                    </h6>
-                </div>
-                <!-- Grid column -->
-
-                <!-- Grid column -->
-                <div class="col-md-2">
-                    <h6 class="text-uppercase font-weight-bold">
-                        <a href="{{ route('posts') }}" class="text-white">Posts</a>
-                    </h6>
-                </div>
-                <!-- Grid column -->
-
-                <!-- Grid column -->
-                <div class="col-md-2">
-                    <h6 class="text-uppercase font-weight-bold">
-                        <a href="{{ route('contact') }}" class="text-white">Contact</a>
-                    </h6>
-                </div>
-                <!-- Grid column -->
-            </div>
-            <!-- Grid row-->
-        </section>
-        <!-- Section: Links -->
-
-        <hr class="my-3"/>
-
         <!-- Section: Text -->
         <section class="mb-3">
             <div class="row d-flex justify-content-center">
                 <div class="col-lg-8">
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
-                        distinctio earum repellat quaerat voluptatibus placeat nam,
-                        commodi optio pariatur est quia magnam eum harum corrupti
-                        dicta, aliquam sequi voluptate quas.
-                    </p>
+                    <h4 class="mt-3">
+                        Shraddha Shrestha
+                    </h4>
+                    <h6>Email: shraddhashrestha@gmail.com</h6>
+                    <h6>Contact: 9841123456</h6>
                 </div>
             </div>
         </section>
@@ -123,21 +88,15 @@
                 <i class="fab fa-twitter"></i>
             </a>
             <a href="" class="text-white me-4">
-                <i class="fab fa-linkedin"></i>
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="" class="text-white me-4">
+                <i class="fab fa-youtube"></i>
             </a>
         </section>
         <!-- Section: Social -->
     </div>
-    <!-- Grid container -->
-
-    <!-- Copyright -->
-    <div
-        class="text-center p-3"
-        style="background-color: rgba(0, 0, 0, 0.2)"
-    >
-        © 2023 Copyright: Shraddha Shrestha
-    </div>
-    <!-- Copyright -->
+  
 </footer>
 <!-- Footer -->
 

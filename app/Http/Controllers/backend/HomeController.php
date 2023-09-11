@@ -17,7 +17,11 @@ class HomeController extends Controller
 
         // Check if a new profile photo has been uploaded
         if ($request->hasFile('profilephoto')) {
-            $profilephoto = 'shraddha-home.' . $request->profilephoto->extension();
+            $profilephoto = 'shraddha-home.png';
+            if (file_exists(public_path('images') . '/' . $profilephoto)) {
+                // If it exists, delete it
+                unlink(public_path('images') . '/' . $profilephoto);
+            }
             $request->profilephoto->move(public_path('images'), $profilephoto);
 
             $user->imagePath = $profilephoto;
@@ -30,8 +34,9 @@ class HomeController extends Controller
 
         return redirect()->route('admin.home')->with('success', 'Information updated successfully');
     }
-    public function addService(Request $request){
-        $logo = $request->title.'.'.$request->logo->extension();
+    public function addService(Request $request)
+    {
+        $logo = time().'-'.$request->title . '.' . $request->logo->extension();
         $request->logo->move(public_path('images'), $logo);
         Service::create([
             'logoPath' => $logo,
