@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\backend\BioController;
 use App\Http\Controllers\backend\HomeController;
 use App\Http\Controllers\backend\LogicController;
 use App\Http\Controllers\backend\NavController;
@@ -40,6 +41,12 @@ Route::get('/post/save', [LogicController::class, 'savePost'])->name('admin.save
 Route::get('/post/edit/{id}', [LogicController::class, 'editPost'])->name('admin.editpost');
 Route::put('/post/update/{id}', [LogicController::class, 'updatePost'])->name('admin.updatepost');
 Route::get('/post/delete/{id}', [LogicController::class, 'deletePost'])->name('admin.deletepost');
+
+//Backed Bio control routes
+Route::post('/bio/save', [BioController::class, 'addBio'])->name('admin.addbio');
+Route::post('/bio/update/{id}', [BioController::class, 'updateBio'])->name('admin.updatebio');
+Route::get('/bio/delete/{id}', [BioController::class, 'deleteBio'])->name('admin.deletebio');
+
 
 
 

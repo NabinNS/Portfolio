@@ -1,12 +1,12 @@
 /* ------------------------------About Section-------------------------------- */
 
-.row{
+.bio-body{
     display: flex;
     align-items: center;
     min-height: 200px;
 }
 
-.row img {
+.bio-body img {
     max-width: 100%;
     height: auto;
     border-radius: 8px;

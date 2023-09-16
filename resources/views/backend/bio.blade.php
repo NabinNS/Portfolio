@@ -7,53 +7,57 @@
         <div class="container">
 
 
-            <div class="d-flex justify-content-center mb-4">
+            <div class="d-flex justify-content-center mb-4 mt-4">
                 <button class="btn btn-outline-primary mr-4" id="newBioButton">Add New Bio</button>
                 <button class="btn btn-outline-secondary" id="updateBioButton">Update Bio</button>
             </div>
-            <div class="card shadow-lg" id="updateBio">
-
+            <div id="updateBio">
                 @foreach ($bios as $bio)
-                    <div class="card-header text-center bg-secondary text-white">
-                        <h4>Bio Setting</h4>
-                    </div>
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <img class="card-img-top" style="height: 400px; width: 400px;"
-                                    src="{{ asset('images/'.$bio->photoPath) }}" alt="Home Image">
-                            </div>
-                            <div class="col-md-6 d-flex flex-column justify-content-center">
-                                <form method="POST" action="{{ route('admin.updatehome') }}" enctype="multipart/form-data">
-                                    @csrf
-                                    <div class="mb-3">
-                                        <label for="imageUpload" class="form-label">Bio Photo:</label>
-                                        <div class="input-group">
-                                            <input type="file" class="form-control" id="imageUpload" name="biophoto">
+                    <div class="card shadow-lg mt-4">
+                        <div class="card-header text-center bg-secondary text-white">
+                            <h4>{{ $bio->title }}</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <img class="card-img-top" style="height: 400px; width: 400px;"
+                                        src="{{ asset('images/' . $bio->photoPath) }}" alt="Home Image">
+                                </div>
+                                <div class="col-md-6 d-flex flex-column justify-content-center">
+                                    <form method="POST" action="{{ route('admin.updatebio',$bio->id) }}"
+                                        enctype="multipart/form-data">
+                                        @csrf
+                                        <div class="mb-3">
+                                            <label for="imageUpload" class="form-label">Bio Photo:</label>
+                                            <div class="input-group">
+                                                <input type="file" class="form-control" id="imageUpload" name="photo">
+
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="imageUpload" class="form-label">Title:</label>
+                                            <input type="text" class="form-control" name="title"
+                                                value="{{ $bio->title }}">
 
                                         </div>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="imageUpload" class="form-label">Title:</label>
-                                        <input type="text" class="form-control" name="biotitle" value="{{ $bio->title }}">
+                                        <div class="mb-3">
+                                            <label for="description" class="form-label">Description:</label>
+                                            <textarea class="form-control" id="description" name="description" rows="5" placeholder="Write about yourself">{{ strip_tags($bio->description) }}</textarea>
 
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="description" class="form-label">Description:</label>
-                                        <textarea class="form-control" id="description" name="description" rows="5" placeholder="Write about yourself">{{ strip_tags($bio->description ) }}</textarea>
-
-                                    </div>
-                                    <div class="text-center">
-                                        <button class="btn btn-primary me-2" type="submit">Update</button>
-                                    </div>
-                                </form>
+                                        </div>
+                                        <div class="text-center">
+                                            <button class="btn btn-primary me-2" type="submit">Update</button>
+                                            <a href="{{ route('admin.deletebio',$bio->id) }}" class="btn btn-danger me-2">Delete</a>
+                                        </div>
+                                    </form>
+                                </div>
                             </div>
                         </div>
                     </div>
                 @endforeach
-
-
             </div>
+
+
 
             <div class="card shadow-lg" id="newBio" style="display: none">
                 <div class="card-header text-center bg-primary text-white">
@@ -71,12 +75,12 @@
                             </ul>
                         </div>
                         <div class="col-md-6 d-flex flex-column justify-content-center">
-                            <form method="POST" action="{{ route('admin.addservice') }}" enctype="multipart/form-data">
+                            <form method="POST" action="{{ route('admin.addbio') }}" enctype="multipart/form-data">
                                 @csrf
                                 <div class="mb-3">
                                     <label for="imageUpload" class="form-label">Bio Photo:</label>
                                     <div class="input-group">
-                                        <input type="file" class="form-control" id="imageUpload" name="logo">
+                                        <input type="file" class="form-control" id="imageUpload" name="photo">
                                     </div>
                                 </div>
                                 <div class="mb-3">
