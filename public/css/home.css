@@ -6,12 +6,11 @@
 }
 
 body {
-    background-color: #D4D1CB;
+    background-color: #d4d1cb;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     line-height: 1.5;
-
 }
 
 main {
@@ -46,7 +45,7 @@ main {
 }
 
 span {
-    color: #AB372E;
+    color: #ab372e;
 }
 
 .detel p {
@@ -55,9 +54,9 @@ span {
 }
 
 .btn-outline-orange {
-    color: #AB372E;
+    color: #ab372e;
     background-color: transparent;
-    border-color: #AB372E;
+    border-color: #ab372e;
     border-width: 1px;
     border-radius: 0px;
     padding: 6px 15px;
@@ -67,7 +66,7 @@ span {
 
 .btn-outline-orange:hover {
     color: white;
-    background-color: #AB372E;
+    background-color: #ab372e;
 }
 
 .social-media-links {
@@ -108,7 +107,7 @@ span {
     height: 100%; /* Set a fixed height for all cards */
     width: calc(33.33% + 240px);
 }
-.border-service{
+.border-service {
     padding: 0 30px;
     color: #800000;
     display: inline-block;
@@ -118,7 +117,7 @@ span {
 }
 
 .max-width h1 {
-    color: #AB372E;
+    color: #ab372e;
     text-align: center;
     position: relative;
     font-size: 40px;
@@ -128,11 +127,11 @@ span {
 }
 
 .max-width h1::after {
-    content: '';
+    content: "";
     position: absolute;
     width: 170px;
     height: 3px;
-    background-color: #1E1613;
+    background-color: #1e1613;
     bottom: 0;
     left: 50%;
     transform: translate(-50%);
@@ -148,8 +147,8 @@ span {
     margin: 0 1rem;
     border-radius: 24px;
     border: solid 3px;
-    border-color: #AB372E;
-    background: #D4D1CB;
+    border-color: #ab372e;
+    background: #d4d1cb;
     text-align: center;
     user-select: none;
     cursor: pointer;
@@ -158,7 +157,7 @@ span {
 }
 
 .card:hover {
-    background-color: #AB372E;
+    background-color: #ab372e;
     box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
 }
 
@@ -172,17 +171,25 @@ span {
 
 .box i {
     font-size: 50px;
-    color: #AB372E;
+    color: #ab372e;
     transition: color 0.3s ease;
 }
 
 .card:hover .box i {
-    color: #D4D1CB;
+    color: #d4d1cb;
 }
 
 .box h3 {
     font-size: 25px;
     padding: 10px 0 7px;
+}
+.icon-image {
+    width: 80px; /* Adjust the width as needed */
+    height: 80px; /* Adjust the height as needed */
+    object-fit: contain; /* Maintain aspect ratio and fit within the dimensions */
+    border-radius: 50%; /* Make it circular */
+    padding: 5px; /* Adjust padding as needed */
+    background-color: #d4d1cb; /* Add a background color if desired */
 }
 
 @media screen and (max-width: 1190px) {
@@ -218,13 +225,39 @@ span {
 /* ----------------------------End of Services------------------------- */
 
 .second-container {
-    background-color: #D4D1CB;
+    background-color: #d4d1cb;
     padding: 20px;
 }
 
 .section-header {
     margin-top: 20px;
-    color: #AB372E;
+    color: #ab372e;
+}
+
+/*--------------------------------deal--------------------------------------------- */
+.deal {
+    background-color: #c9c5bb;
+    height: 200px;
+}
+.deal-tagline {
+    font-size: 24px;
+    color: #333;
+    font-weight: bold;
+}
+
+.btn-maroon {
+    background-color: #ab372e; /* Maroon color */
+    color: #fff; /* White text color */
+    border: none; /* Remove the button border if desired */
+    padding: 10px 25px;
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth color transition on hover */
+    font: bold;
+}
+
+/* Change button color on hover */
+.btn-maroon:hover {
+    background-color: #d82323; /* Darker maroon color on hover */
 }
 
 /*--------------------------------Footer--------------------------------------------- */
@@ -259,5 +292,3 @@ span {
 }
 
 /* -------------End of Home Page------------------------- */
-
-
