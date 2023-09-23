@@ -1,6 +1,9 @@
 @extends('backend.layout')
 
 @section('styles')
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 @endsection
 
 @section('content')
@@ -55,13 +58,22 @@
                 </div>
                 <div class="card-body">
                     <div class="row">
-                        <div class="col-md-6 text-center">
+                        <div class="col-md-6 text-center service-list" style="overflow: auto;">
                             <h4 class="mb-4 pb-2 border-bottom border-primary">Existing Services</h4>
                             <ul class="list-unstyled">
                                 @foreach ($services as $service)
-                                    <li>{{ $service->title }}</li>
+                                    <li class="d-flex justify-content-around align-items-center">
+                                        {{ $service->title }}
+                                        <div class="actions">
+                                            <a href="{{ route('admin.editservice', $service->id) }}"><i
+                                                    class="fas fa-edit text-success"></i></a>
+                                            <a href="{{ route('admin.deleteservice', $service->id) }}"><i
+                                                    class="fas fa-trash ml-2 text-danger"></i></a>
+                                        </div>
+                                    </li>
+                                    <hr>
                                 @endforeach
-                                
+
                             </ul>
                         </div>
                         <div class="col-md-6 d-flex flex-column justify-content-center">

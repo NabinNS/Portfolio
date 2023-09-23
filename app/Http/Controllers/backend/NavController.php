@@ -4,6 +4,7 @@ namespace App\Http\Controllers\backend;
 
 use App\Http\Controllers\Controller;
 use App\Models\Bio;
+use App\Models\Detail;
 use App\Models\Post;
 use App\Models\Service;
 use App\Models\User;
@@ -19,7 +20,8 @@ class NavController extends Controller
 
     public function settingpage()
     {
-        return view('backend.setting');
+        $detail = Detail::first();
+        return view('backend.setting', compact('detail'));
     }
 
     public function postpage()
@@ -27,12 +29,8 @@ class NavController extends Controller
         $posts = Post::all();
         return view('backend.post', compact('posts'));
     }
-    
 
-    public function contactpage()
-    {
-        return view('backend.contact');
-    }
+
 
     public function loginpage()
     {
@@ -41,6 +39,6 @@ class NavController extends Controller
     public function biopage()
     {
         $bios = Bio::all();
-        return view('backend.bio',compact('bios'));
+        return view('backend.bio', compact('bios'));
     }
 }

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\frontend;
 
 use App\Http\Controllers\Controller;
 use App\Models\Bio;
+use App\Models\Detail;
 use App\Models\Post;
 use App\Models\Service;
 use App\Models\User;
@@ -15,7 +16,8 @@ class NavigationController extends Controller
     {
         $services = Service::all();
         $user = User::first();
-        return view('frontend.home', compact('services', 'user'));
+        $detail = Detail::first();
+        return view('frontend.home', compact('services', 'user', 'detail'));
     }
     public function biopage()
     {

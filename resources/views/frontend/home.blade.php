@@ -22,15 +22,15 @@
 
                 </p>
             </h6>
-            <a href="#" class="btn btn-outline-orange">View More </a>
+            <a href="#servicesdetails" class="btn btn-outline-orange">View More </a>
             <br>
-            <a href="#" class="btn btn-outline-secondary">Contact Me </a>
+            <a href="{{ route('contact') }}" class="btn btn-outline-secondary">Contact Me </a>
             <div class="social-media-links mt-3 text-center">
-                <a href="https://www.facebook.com" class="social-link ms-5"><i class="fab fa-facebook-f fa-lg"
+                <a href="{{ optional($detail)->facebook }}" class="social-link ms-5"><i class="fab fa-facebook-f fa-lg"
                         style="color:#AB372E"></i></a>
-                <a href="https://www.twitter.com" class="social-link ms-5"><i class="fab fa-twitter fa-lg"
+                <a href="{{ optional($detail)->youtube }}" class="social-link ms-5"><i class="fab fa-youtube fa-lg"
                         style="color:#AB372E"></i></a>
-                <a href="https://www.instagram.com" class="social-link ms-5"><i class="fab fa-instagram fa-lg"
+                <a href="{{ optional($detail)->instagram }}" class="social-link ms-5"><i class="fab fa-instagram fa-lg"
                         style="color:#AB372E"></i></a>
             </div>
         </div>
@@ -38,7 +38,7 @@
             <img src="{{ asset('images/' . $user->imagePath) }}" alt="profile image" class="girl">
         </div>
     </section>
-    <section class="section-container">
+    <section class="section-container" id = "servicesdetails">
         <div class="container">
             <div class="text-center">
 
@@ -47,8 +47,7 @@
 
             <div class="d-flex justify-content-center mb-5">
                 @foreach ($services as $service)
-                <img src="{{ asset('images/' . $service->logoPath) }}" alt="logo"
-                class="icon-image">
+                    <img src="{{ asset('images/' . $service->logoPath) }}" alt="logo" class="icon-image  service-logo">
                 @endforeach
             </div>
             <hr>
@@ -68,41 +67,18 @@
                         </div>
                     </div>
                 @endforeach
-
-                <div class="col-md-4 mb-4">
-                    <div class="card card-equal-height">
-                        <div class="box">
-
-                            <i class="fa fa-user"></i>
-                            <h3>Service 1</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, hic error. At, cupiditate
-                                inventore. </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card card-equal-height">
-                        <div class="box">
-                            <i class="fa fa-handshake"></i>
-                            <h3>Service 2</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, hic error. At, cupiditate
-                                inventore. Non, ullam quibusdam. Alias repudiandae quidem numquam temporibus dolorum ab
-                                accusantium, accusamus, totam perspiciatis voluptatum consequatur.</p>
-                        </div>
-                    </div>
-                </div>
             </div>
 
         </div>
 
 
     </section>
-    
+
     <div class="d-flex justify-content-center align-items-center deal mt-4">
         <div>
-            <h4 class= "deal-tagline">Let Me Get You A Beautiful Deal</h4>
-         <div class="text-center mt-4">
-             <a href="{{ route('contact') }}" class="btn btn-maroon">Contact me</a>
+            <h4 class="deal-tagline">Let Me Get You A Beautiful Deal</h4>
+            <div class="text-center mt-4">
+                <a href="{{ route('contact') }}" class="btn btn-maroon">Contact me</a>
             </div>
         </div>
     </div>

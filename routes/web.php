@@ -4,6 +4,7 @@ use App\Http\Controllers\backend\BioController;
 use App\Http\Controllers\backend\HomeController;
 use App\Http\Controllers\backend\LogicController;
 use App\Http\Controllers\backend\NavController;
+use App\Http\Controllers\backend\SettingController;
 use App\Http\Controllers\frontend\NavigationController;
 use Illuminate\Support\Facades\Route;
 
@@ -35,6 +36,12 @@ Route::get('/admin/bio', [NavController::class, 'biopage'])->name('admin.bio');
 //backend home controlling routes
 Route::post('/admin/update/home',[HomeController::class,'updateHome'])->name('admin.updatehome');
 Route::post('/admin/service/add',[HomeController::class,'addService'])->name('admin.addservice');
+//backend service controlling routes
+Route::get('/admin/service/delete/{id}',[HomeController::class,'deleteService'])->name('admin.deleteservice');
+Route::get('/admin/service/edit/{id}',[HomeController::class,'editService'])->name('admin.editservice');
+Route::post('/admin/service/update/{id}',[HomeController::class,'updateService'])->name('admin.updateservice');
+
+
 
 //Backend story control routes
 Route::get('/post/save', [LogicController::class, 'savePost'])->name('admin.savepost');
@@ -42,10 +49,12 @@ Route::get('/post/edit/{id}', [LogicController::class, 'editPost'])->name('admin
 Route::put('/post/update/{id}', [LogicController::class, 'updatePost'])->name('admin.updatepost');
 Route::get('/post/delete/{id}', [LogicController::class, 'deletePost'])->name('admin.deletepost');
 
-//Backed Bio control routes
+//Backend Bio control routes
 Route::post('/bio/save', [BioController::class, 'addBio'])->name('admin.addbio');
 Route::post('/bio/update/{id}', [BioController::class, 'updateBio'])->name('admin.updatebio');
 Route::get('/bio/delete/{id}', [BioController::class, 'deleteBio'])->name('admin.deletebio');
+//Backend Setting control routes
+Route::post('/setting/update',[SettingController::class,'updateDetails'])->name('admin.updatedetails');
 
 
 
